@@ -20,7 +20,6 @@ export function list(target = document.querySelector('body')) {
 
     form.addEventListener('submit', (eventObject) => {
         eventObject.preventDefault();
-        console.log(eventObject);
         renderListItem();
     });
 
@@ -30,10 +29,20 @@ export function list(target = document.querySelector('body')) {
     function renderListItem() {
         const value = input.value;
         const li = document.createElement('li');
+        const btn = document.createElement('button');
 
         li.classList.add('list__item')
         li.textContent = value;
 
+        function removeItem () {
+            console.log('Removed');
+            ul.removeChild(li);
+            btn.removeEventListener('click', removeItem);
+        }
+
+        btn.addEventListener('click', removeItem);
+        
+        li.appendChild(btn);
         ul.appendChild(li);
         input.value = '';
     }
