@@ -11,8 +11,8 @@ fruites.push('tomatoes');
 fruites.pop();
 
 
-// es6
-class User {
+// // es6
+class Persone {
     constructor(firstName, secondName, email, age) {
         this.firstName = firstName;
         this.secondName = secondName;
@@ -22,21 +22,38 @@ class User {
     }
 
     greet() {
-        return `Hello my name is ${this.firstname} ${this.secondName}`;
+        return this._createGreetPhrase();
     }
 
-    test() {
-        console.log('Hello world');
+    _createGreetPhrase() {
+        return `Hello my name is ${this.firstname} ${this.secondName}`;
+    }
+}
+
+class Developer extends Persone {
+    constructor(firstName, secondName, email, age, lang) {
+        super(firstName, secondName, email, age);
+        this.lang = lang;
+    }
+
+    code() {
+        console.log('Write code on' + this.lang);
     }
 }
 
 // Object
 const users = [
-    new User('Vasya', 'Ivanov', 'vasya@gmail.com', 20),
-    new User('Jack', 'Daniel', 'vasya@gmail.com', 20),
-    new User('John', 'Snow', 'vasya@gmail.com', 20),
-    new User('Tony', 'Smith', 'vasya@gmail.com', 20),
+    new Persone('Vasya', 'Ivanov', 'vasya@gmail.com', 20),
+    new Developer('Jack', 'Daniel', 'vasya@gmail.com', 20, 'js'),
+    new Persone('John', 'Snow', 'vasya@gmail.com', 20),
+    new Developer('Tony', 'Smith', 'vasya@gmail.com', 20),
 ];
+
+console.log(users[0]);
+
+window.user = users[0];
+window.user1 = users[1];
+
 const body = document.querySelector('body');
 
 for(const user of users) {
