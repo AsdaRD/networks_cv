@@ -16,6 +16,7 @@ export class List {
     onSubmit(e) {
         e.preventDefault();
         const value = this._input.value;
+        const requestData = JSON.stringify({ title: value });
 
         this._request.post(
             prodURL,
@@ -35,7 +36,6 @@ export class List {
         this._input = document.createElement('input');
         this._input.type = 'text';
         this._form.appendChild(this._input);
-
         this._form.addEventListener('submit', (e) => this.onSubmit(e));
 
         this._ul = document.createElement('ul');
