@@ -60,7 +60,7 @@ export class App extends React.Component {
     }
 
     searchHandler(response) {
-        console.log('>>>RESPONSE FROM SEACR', JSON.stringify(response));\
+        console.log('>>>RESPONSE FROM SEACR', JSON.stringify(response));
         // this.setImages(JSON.parse(imagesJSON));
     }
 
