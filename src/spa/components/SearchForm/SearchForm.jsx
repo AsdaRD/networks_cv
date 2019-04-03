@@ -1,7 +1,8 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import './SearchForm.scss';
 
-export class SearchForm extends React.Component {
+class SearchForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -14,9 +15,7 @@ export class SearchForm extends React.Component {
 
     submitForm(e) {
         e.preventDefault();
-        // ADD CODE FOR SEARCH REQUEST
-        // new Request() https://api.unsplash.com/search/photos?page=3&query=apple&client_id=YOUR_CLIENT_ID
-        // Handle response this.props.onSearchSucceed(response)
+        this.props.history.push(`/search/${this.state.searchValue}`);
     }
 
     onChange(e) {
@@ -26,15 +25,20 @@ export class SearchForm extends React.Component {
 
     render() {
         const className = this.props.className || '';
-
+        console.log(this.props.history);
         return <form className={className + " search-form"} onSubmit={this.submitForm}>
             <button className="search-form__button">S</button>
-            <input 
-                type="text" 
-                className="search-form__input" 
+            <input
+                type="text"
+                className="search-form__input"
                 onChange={this.onChange}
-                value={ this.state.searchValue } 
+                value={this.state.searchValue}
                 placeholder="Search..." />
         </form>
     }
 }
+
+// Here we take history object from react router
+const SearchFormWithRouter = withRouter(SearchForm);
+
+export { SearchFormWithRouter as SearchForm }
