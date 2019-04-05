@@ -1,5 +1,6 @@
 import React from 'react';
 import { Request } from '../../request';
+import { Grid } from '../Grid';
 
 export class Home extends React.Component {
     constructor(props) {
@@ -45,12 +46,6 @@ export class Home extends React.Component {
             });
     }
 
-    renderImages() {
-        return this.state.images.map(image => {
-            return <img src={`${image.urls.small}`} />;
-        });
-    }
-
     searchHandler(images) {
         console.log('>>>RESPONSE FROM SEACR', images);
         // this.setState
@@ -60,7 +55,7 @@ export class Home extends React.Component {
     render() {
         return <div>
             <div>
-                {this.renderImages()}
+                <Grid images={this.state.images} />
             </div>
             <button onClick={this.nextImages}>Next</button>
         </div>
