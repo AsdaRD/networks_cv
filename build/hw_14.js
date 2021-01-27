@@ -60,106 +60,58 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 366);
+/******/ 	return __webpack_require__(__webpack_require__.s = 429);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 366:
+/***/ 429:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(367);
+module.exports = __webpack_require__(430);
 
 
 /***/ }),
 
-/***/ 367:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _dom = __webpack_require__(368);
-
-__webpack_require__(369);
-
-var widgets = document.querySelectorAll('.greet-widget');
-
-var _iteratorNormalCompletion = true;
-var _didIteratorError = false;
-var _iteratorError = undefined;
-
-try {
-    for (var _iterator = widgets[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        var widgetElement = _step.value;
-
-        console.log(widgetElement);
-        (0, _dom.greetWidget)(widgetElement);
-    }
-} catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-} finally {
-    try {
-        if (!_iteratorNormalCompletion && _iterator.return) {
-            _iterator.return();
-        }
-    } finally {
-        if (_didIteratorError) {
-            throw _iteratorError;
-        }
-    }
-}
-
-/***/ }),
-
-/***/ 368:
+/***/ 430:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-function greetWidget(rootElement) {
-    var button = rootElement.querySelector('.greet-widget__btn');
-    var title = rootElement.querySelector('.greet-widget__title');
+__webpack_require__(431);
 
-    var isActive = true;
+/*import { SortingCategory } from './scripts/sorting_category';*/
 
-    button.onclick = toggle;
+function dropDownMenu() {
+	var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector('body');
 
-    function toggle() {
-        if (isActive) {
-            toggleOff();
-        } else {
-            toggleOn();
-        }
-    }
+	var menu = document.createElement('div');
+	var button = document.createElement('button');
+	var list = document.createElement('ul');
 
-    function toggleOn() {
-        button.classList.add('btn_active');
-        rootElement.classList.add('greet-widget_active');
-        title.classList.add('greet-widget__title_active');
-        isActive = true;
-    }
+	menu.classList.add('menu');
+	button.classList.add('menu__btn');
+	list.classList.add('menu__category_list');
 
-    function toggleOff() {
-        button.classList.remove('btn_active');
-        rootElement.classList.remove('greet-widget_active');
-        title.classList.remove('greet-widget__title_active');
-        isActive = false;
-    }
+	button.textContent = 'Sort by';
 
-    toggle();
+	menu.appendChild(button);
+	menu.appendChild(list);
+	/*	list.appendChild(SortingCategory());*/
+	target.appendChild(menu);
 }
-
-exports.greetWidget = greetWidget;
+dropDownMenu();
+/*
+new SortingCategory(undefined, 'Name');
+new SortingCategory(undefined, 'Date');
+new SortingCategory(undefined, 'Price');
+new SortingCategory(undefined, 'Size');
+*/
 
 /***/ }),
 
-/***/ 369:
+/***/ 431:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
