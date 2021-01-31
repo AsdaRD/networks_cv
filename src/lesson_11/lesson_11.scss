@@ -13,4 +13,12 @@
     }
 }
 
+.greet-widget {
+    &__title {
+        display: none;
+        &_active {
+            display: inherit;
+        }
+    }
+}
 

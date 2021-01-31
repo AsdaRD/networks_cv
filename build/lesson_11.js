@@ -91,7 +91,39 @@ __webpack_require__(6);
 "use strict";
 
 
-var t = 'Hello World';
+var buttons = document.querySelectorAll('.btn');
+
+var _loop = function _loop(button) {
+    button.onclick = activate;
+    function activate() {
+        button.classList.toggle('btn_active');
+    }
+};
+
+var _iteratorNormalCompletion = true;
+var _didIteratorError = false;
+var _iteratorError = undefined;
+
+try {
+    for (var _iterator = buttons[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+        var button = _step.value;
+
+        _loop(button);
+    }
+} catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+} finally {
+    try {
+        if (!_iteratorNormalCompletion && _iterator.return) {
+            _iterator.return();
+        }
+    } finally {
+        if (_didIteratorError) {
+            throw _iteratorError;
+        }
+    }
+}
 
 /***/ }),
 /* 6 */
