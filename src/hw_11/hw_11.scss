@@ -1,0 +1,28 @@
+* {
+   box-sizing: border-box; 
+}
+
+.traffic-light-widget {
+    display: block;
+    width: 70px;
+    border: 3px solid black;
+}
+.btn {
+    border: none;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    &_defauld {
+        background: grey;
+    }
+    &_red.active {
+        background: red;
+    }
+    &_yellow.active {
+        background: yellow;
+    }
+    &_green.active {
+        background: green;
+    }
+}
+

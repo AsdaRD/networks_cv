@@ -8,3 +8,8 @@
     background: green; }
   .btn_active {
     background: red; }
+
+.greet-widget__title {
+  display: none; }
+  .greet-widget__title_active {
+    display: inherit; }

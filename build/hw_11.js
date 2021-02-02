@@ -60,103 +60,95 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */,
 /* 1 */,
 /* 2 */,
-/* 3 */
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(4);
+module.exports = __webpack_require__(8);
 
 
 /***/ }),
-/* 4 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _dom = __webpack_require__(5);
+__webpack_require__(9);
 
-__webpack_require__(6);
+__webpack_require__(10);
 
-var widgets = document.querySelectorAll('.greet-widget');
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
 
-var _iteratorNormalCompletion = true;
-var _didIteratorError = false;
-var _iteratorError = undefined;
+"use strict";
 
-try {
-    for (var _iterator = widgets[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        var widgetElement = _step.value;
 
-        console.log(widgetElement);
-        (0, _dom.greetWidget)(widgetElement);
-    }
-} catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-} finally {
+function TrafficLightWidget(buttons) {
+    var _loop = function _loop(button) {
+        button.onclick = toggle;
+        var isActive = true;
+
+        function toggle() {
+            if (isActive) {
+                toggleOn();
+            } else {
+                toggleOff();
+            }
+
+            function toggleOn() {
+                button.classList.add('active');
+                isActive = false;
+            }
+
+            function toggleOff() {
+                button.classList.remove('active');
+                isActive = true;
+            }
+        }
+    };
+
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
     try {
-        if (!_iteratorNormalCompletion && _iterator.return) {
-            _iterator.return();
+
+        for (var _iterator = buttons[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var button = _step.value;
+
+            _loop(button);
         }
+    } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
     } finally {
-        if (_didIteratorError) {
-            throw _iteratorError;
+        try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+                _iterator.return();
+            }
+        } finally {
+            if (_didIteratorError) {
+                throw _iteratorError;
+            }
         }
     }
 }
+TrafficLightWidget(document.querySelectorAll('.btn'));
 
 /***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-function greetWidget(rootElement) {
-    var button = rootElement.querySelector('.greet-widget__btn');
-    var title = rootElement.querySelector('.greet-widget__title');
-    var isActive = true;
-
-    button.onclick = toggle;
-
-    function toggle() {
-        if (isActive) {
-            toggleOff();
-        } else {
-            toggleOn();
-        }
-    }
-
-    function toggleOn() {
-        button.classList.add('btn_active');
-        rootElement.classList.add('greet-widget_active');
-        title.classList.add('greet-widget__title_active');
-        isActive = true;
-    }
-
-    function toggleOff() {
-        button.classList.remove('btn_active');
-        rootElement.classList.remove('greet-widget_active');
-        title.classList.remove('greet-widget__title_active');
-        isActive = false;
-    }
-    toggle();
-}
-
-exports.greetWidget = greetWidget;
-
-/***/ }),
-/* 6 */
+/* 10 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
