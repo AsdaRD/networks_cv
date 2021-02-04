@@ -94,9 +94,46 @@ __webpack_require__(14);
 
 /***/ }),
 /* 13 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: Unexpected token (6:8)\n\n\u001b[0m \u001b[90m 4 | \u001b[39m        \u001b[36mfunction\u001b[39m toggle() {\n \u001b[90m 5 | \u001b[39m            \u001b[36mif\u001b[39m(button\u001b[33m.\u001b[39mclassList\u001b[33m.\u001b[39mcontains(\u001b[32m''\u001b[39m))\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 | \u001b[39m        }\n \u001b[90m   | \u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 | \u001b[39m    }\n \u001b[90m 8 | \u001b[39m}\n \u001b[90m 9 | \u001b[39m\u001b[0m\n");
+"use strict";
+
+
+function Switcher(buttons) {
+    var _loop = function _loop(button) {
+        button.onclick = toggle;
+        function toggle() {
+            if (button.classList.contains('')) {}
+        }
+    };
+
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+        for (var _iterator = buttons[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var button = _step.value;
+
+            _loop(button);
+        }
+    } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+    } finally {
+        try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+                _iterator.return();
+            }
+        } finally {
+            if (_didIteratorError) {
+                throw _iteratorError;
+            }
+        }
+    }
+}
+
+Switcher(document.querySelectorAll('.btn'));
 
 /***/ }),
 /* 14 */
