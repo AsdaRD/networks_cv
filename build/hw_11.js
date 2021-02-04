@@ -84,9 +84,12 @@ module.exports = __webpack_require__(8);
 "use strict";
 
 
-__webpack_require__(9);
+var _dom = __webpack_require__(9);
 
 __webpack_require__(10);
+
+var buttons = document.querySelectorAll('.btn');
+(0, _dom.TrafficLightWidget)(buttons);
 
 /***/ }),
 /* 9 */
@@ -95,26 +98,35 @@ __webpack_require__(10);
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 function TrafficLightWidget(buttons) {
+    var off = 0;
+
     var _loop = function _loop(button) {
         button.onclick = toggle;
-        var isActive = true;
 
         function toggle() {
-            if (isActive) {
-                toggleOn();
-            } else {
+            if (button.classList.contains('active')) {
                 toggleOff();
+            } else {
+                toggleOn();
             }
 
             function toggleOn() {
-                button.classList.add('active');
-                isActive = false;
+                if (off !== 0) {
+                    off.classList.remove('active');
+                    button.classList.add('active');
+                    off = button;
+                } else {
+                    button.classList.add('active');
+                    off = button;
+                }
             }
 
             function toggleOff() {
                 button.classList.remove('active');
-                isActive = true;
             }
         }
     };
@@ -124,7 +136,6 @@ function TrafficLightWidget(buttons) {
     var _iteratorError = undefined;
 
     try {
-
         for (var _iterator = buttons[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
             var button = _step.value;
 
@@ -145,7 +156,7 @@ function TrafficLightWidget(buttons) {
         }
     }
 }
-TrafficLightWidget(document.querySelectorAll('.btn'));
+exports.TrafficLightWidget = TrafficLightWidget;
 
 /***/ }),
 /* 10 */

@@ -1,29 +1,34 @@
 function TrafficLightWidget(buttons) {
-    
+    let off = 0;
     for(const button of buttons) {
         button.onclick = toggle;
-        let isActive = true;
         
         function toggle() {
-            if(isActive) {
-                toggleOn();
-            
-            } else {
+            if(button.classList.contains('active')) {
                 toggleOff();
+                
+            } else {
+                toggleOn();
             }
-
+            
             function toggleOn() {
+                if(off !== 0) {
+                    off.classList.remove('active');
                 button.classList.add('active');
-                isActive = false;
+                off = button;
+                } else {
+                    button.classList.add('active');
+                off = button;
+                }
+            
             }
 
             function toggleOff() {
                 button.classList.remove('active');
-                isActive = true;                
             }
         }    
     }
     
 
 }
-TrafficLightWidget(document.querySelectorAll('.btn'));
+export { TrafficLightWidget };

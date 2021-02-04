@@ -1,10 +1,6 @@
-// import { trafficWidget } from './scrypts/dom';
-import './scrypts/dom';
+import { TrafficLightWidget } from './scrypts/dom';
 import './hw_11.scss';
 
-// const widgets = document.querySelectorAll('.traffic-light');
+const buttons = document.querySelectorAll('.btn');
+TrafficLightWidget(buttons);
 
-// for(const widgetElement of widgets) {
-//     console.log(widgetElement);
-//     trafficWidget(widgetElement);
-// }
