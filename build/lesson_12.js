@@ -60,75 +60,44 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */
+/******/ ({
+
+/***/ 15:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(12);
+module.exports = __webpack_require__(16);
 
 
 /***/ }),
-/* 12 */
+
+/***/ 16:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _dom = __webpack_require__(13);
+__webpack_require__(17);
 
-__webpack_require__(14);
-
-;
-
-
-var button = document.querySelector('.btn');
-var lamp = document.querySelector('.lamp');
-(0, _dom.Switcher)(button, lamp);
+__webpack_require__(18);
 
 /***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-function Switcher(button, lamp) {
-    button.onclick = toggle;
-    function toggle() {
-        if (button.innerHTML === 'ON') {
-            button.innerHTML = 'OFF';
-            lamp.style.cssText = 'background-color: limegreen; box-shadow: 0 20px 40px 0 rgba(27, 255, 6, 0.24), 0 30px 70px 0 rgba(14, 179, 22, 0.19);';
-        } else {
-            button.innerHTML = 'ON';
-            lamp.style.cssText = 'background-color: white;';
-        }
-    }
-}
-
-exports.Switcher = Switcher;
-
-/***/ }),
-/* 14 */
+/***/ 17:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
+/***/ }),
+
+/***/ 18:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 /***/ })
-/******/ ]);
+
+/******/ });

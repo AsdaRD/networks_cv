@@ -1,5 +1,6 @@
-import { greetWidget } from './scrypts/dom';
 import './lesson_11.scss';
+
+import { greetWidget } from './scrypts/dom';
 
 const widgets = document.querySelectorAll('.greet-widget');
 
