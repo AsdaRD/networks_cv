@@ -18,7 +18,7 @@ function greetWidget(target = document.querySelector('body')) {
     rootElement.appendChild(title);
     target.appendChild(rootElement);
 
-    button.onclick = toggle;
+    button.addEventListener('click', toggle);
 
     function toggle() {
         if(isActive) {
