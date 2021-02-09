@@ -60,106 +60,44 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */
+/******/ ({
+
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(4);
+module.exports = __webpack_require__(23);
 
 
 /***/ }),
-/* 4 */
+
+/***/ 23:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(5);
+__webpack_require__(24);
 
-var _dom = __webpack_require__(6);
-
-var widgets = document.querySelectorAll('.greet-widget');
-
-var _iteratorNormalCompletion = true;
-var _didIteratorError = false;
-var _iteratorError = undefined;
-
-try {
-    for (var _iterator = widgets[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        var widgetElement = _step.value;
-
-        console.log(widgetElement);
-        (0, _dom.greetWidget)(widgetElement);
-    }
-} catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-} finally {
-    try {
-        if (!_iteratorNormalCompletion && _iterator.return) {
-            _iterator.return();
-        }
-    } finally {
-        if (_didIteratorError) {
-            throw _iteratorError;
-        }
-    }
-}
+__webpack_require__(25);
 
 /***/ }),
-/* 5 */
+
+/***/ 24:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/***/ }),
+
+/***/ 25:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-function greetWidget(rootElement) {
-    var button = rootElement.querySelector('.greet-widget__btn');
-    var title = rootElement.querySelector('.greet-widget__title');
-    var isActive = true;
-
-    button.onclick = toggle;
-
-    function toggle() {
-        if (isActive) {
-            toggleOff();
-        } else {
-            toggleOn();
-        }
-    }
-
-    function toggleOn() {
-        button.classList.add('btn_active');
-        rootElement.classList.add('greet-widget_active');
-        title.classList.add('greet-widget__title_active');
-        isActive = true;
-    }
-
-    function toggleOff() {
-        button.classList.remove('btn_active');
-        rootElement.classList.remove('greet-widget_active');
-        title.classList.remove('greet-widget__title_active');
-        isActive = false;
-    }
-    toggle();
-}
-
-exports.greetWidget = greetWidget;
-
 /***/ })
-/******/ ]);
+
+/******/ });

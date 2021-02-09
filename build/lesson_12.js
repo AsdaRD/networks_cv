@@ -63,17 +63,30 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 15:
+/******/ ([
+/* 0 */,
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(16);
 
 
 /***/ }),
-
-/***/ 16:
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -81,23 +94,187 @@ module.exports = __webpack_require__(16);
 
 __webpack_require__(17);
 
-__webpack_require__(18);
+var _greet = __webpack_require__(18);
+
+var _list = __webpack_require__(20);
+
+var button = document.querySelector('#btn');
+var content = document.querySelector('.content');
+button.onclick = function () {
+    (0, _greet.greetWidget)(content);
+};
+
+function analize() {
+    var buttons = document.querySelectorAll('button');
+    var i = 0;
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+        for (var _iterator = buttons[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var _button = _step.value;
+
+            _button.addEventListener('click', function () {
+                i++;
+                console.log(i);
+            });
+        }
+    } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+    } finally {
+        try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+                _iterator.return();
+            }
+        } finally {
+            if (_didIteratorError) {
+                throw _iteratorError;
+            }
+        }
+    }
+}
+
+(0, _list.list)();
+analize();
 
 /***/ }),
-
-/***/ 17:
+/* 17 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-
-/***/ 18:
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-/***/ })
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.greetWidget = undefined;
 
-/******/ });
+__webpack_require__(19);
+
+function greetWidget() {
+    var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector('body');
+
+    var rootElement = document.createElement('div');
+    var button = document.createElement('button');
+    var title = document.createElement('h2');
+
+    var isActive = true;
+
+    title.textContent = 'Hello World';
+    button.textContent = 'On/off';
+
+    rootElement.classList.add('greet-widget');
+    button.classList.add('greet-widget__btn', 'btn', 'btn-color');
+    title.classList.add('greet-widget__title');
+
+    rootElement.appendChild(button);
+    rootElement.appendChild(title);
+    target.appendChild(rootElement);
+
+    button.addEventListener('click', toggle);
+
+    function toggle() {
+        if (isActive) {
+            toggleOff();
+        } else {
+            toggleOn();
+        }
+    }
+
+    function toggleOn() {
+        button.classList.add('btn_active');
+        rootElement.classList.add('greet-widget_active');
+        title.classList.add('greet-widget__title_active');
+        isActive = true;
+    }
+
+    function toggleOff() {
+        button.classList.remove('btn_active');
+        rootElement.classList.remove('greet-widget_active');
+        title.classList.remove('greet-widget__title_active');
+        isActive = false;
+    }
+    toggle();
+}
+
+exports.greetWidget = greetWidget;
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.list = list;
+
+__webpack_require__(21);
+
+function list() {
+  var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector("body");
+
+  var root = document.createElement("div");
+  var form = document.createElement("form");
+  var input = document.createElement("input");
+  var ul = document.createElement("ul");
+
+  form.appendChild(input);
+
+  input.type = "text";
+  input.placeholder = "Enter task...";
+
+  root.classList.add("list");
+  form.classList.add("list__form");
+  input.classList.add("list__input");
+
+  root.appendChild(form);
+  root.appendChild(ul);
+
+  form.addEventListener('submit', function (eventObject) {
+    eventObject.preventDefault();
+    renderListItem();
+  });
+
+  target.appendChild(root);
+
+  function renderListItem() {
+    var value = input.value;
+
+    if (value === "") {
+      return false;
+    } else {
+      var li = document.createElement("li");
+      li.classList.add("list__item");
+      li.textContent = value;
+
+      ul.appendChild(li);
+      input.value = "";
+    }
+  }
+}
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ })
+/******/ ]);
