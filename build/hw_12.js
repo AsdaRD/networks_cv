@@ -79,9 +79,11 @@ module.exports = __webpack_require__(23);
 "use strict";
 
 
-__webpack_require__(24);
+var _comments = __webpack_require__(24);
 
 __webpack_require__(25);
+
+(0, _comments.comments)();
 
 /***/ }),
 
@@ -90,6 +92,52 @@ __webpack_require__(25);
 
 "use strict";
 
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.comments = comments;
+function comments() {
+    var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector('body');
+
+
+    var root = document.createElement('div');
+    var form = document.createElement('form');
+    var name = document.createElement('input');
+    var comment = document.createElement('textarea');
+    var submit = document.createElement('button');
+    var ul = document.createElement('ul');
+
+    form.appendChild(name);
+    form.appendChild(comment);
+    form.appendChild(submit);
+    root.appendChild(form);
+    root.appendChild(ul);
+    target.appendChild(root);
+
+    name.type = 'text';
+    name.placeholder = 'Name...';
+    comment.placeholder = 'Lorem...';
+    var bold = document.createElement('b');
+    submit.appendChild(bold);
+    bold.textContent = 'Add comment';
+
+    root.classList.add('list');
+    form.classList.add('list__form');
+    name.classList.add('list__name');
+    comment.classList.add('list__comment');
+    submit.classList.add('list__submit');
+
+    form.addEventListener('submit', function (eventObject) {
+        eventObject.preventDefault();
+        renderListItem();
+    });
+
+    function renderListItem() {
+        var li = document.createElement('li');
+        ul.appendChild(li);
+    }
+}
 
 /***/ }),
 
