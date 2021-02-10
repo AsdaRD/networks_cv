@@ -56,4 +56,10 @@ $border-focus: rgba(23, 116, 238, 0.726);
             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
         }
     }
+    &__elem {
+        list-style-type: none;
+    }
+    &__header {
+        color: $border-focus;
+    }
 }
