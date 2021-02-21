@@ -60,103 +60,39 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 23);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 23:
+/***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(24);
+module.exports = __webpack_require__(21);
 
 
 /***/ }),
 
-/***/ 24:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _dom = __webpack_require__(25);
-
-__webpack_require__(26);
-
-var buttons = document.querySelectorAll('.btn');
-(0, _dom.TrafficLightWidget)(buttons);
-
-/***/ }),
-
-/***/ 25:
+/***/ 21:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-function TrafficLightWidget(buttons) {
-    var off = 0;
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-    var _loop = function _loop(button) {
-        button.onclick = toggle;
+__webpack_require__(22);
 
-        function toggle() {
-            if (button.classList.contains('active')) {
-                toggleOff();
-            } else {
-                toggleOn();
-            }
+var fruits = ['oranges', 'bananas', 'apples'];
 
-            function toggleOn() {
-                if (off !== 0) {
-                    off.classList.remove('active');
-                    button.classList.add('active');
-                    off = button;
-                } else {
-                    button.classList.add('active');
-                    off = button;
-                }
-            }
+fruits.push('tomatoes');
+fruits.pop();
 
-            function toggleOff() {
-                button.classList.remove('active');
-            }
-        }
-    };
-
-    var _iteratorNormalCompletion = true;
-    var _didIteratorError = false;
-    var _iteratorError = undefined;
-
-    try {
-        for (var _iterator = buttons[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-            var button = _step.value;
-
-            _loop(button);
-        }
-    } catch (err) {
-        _didIteratorError = true;
-        _iteratorError = err;
-    } finally {
-        try {
-            if (!_iteratorNormalCompletion && _iterator.return) {
-                _iterator.return();
-            }
-        } finally {
-            if (_didIteratorError) {
-                throw _iteratorError;
-            }
-        }
-    }
-}
-exports.TrafficLightWidget = TrafficLightWidget;
+console.log(typeof fruits === 'undefined' ? 'undefined' : _typeof(fruits));
 
 /***/ }),
 
-/***/ 26:
+/***/ 22:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

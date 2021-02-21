@@ -31,9 +31,19 @@ export function list(target = document.querySelector("body")) {
       return false;
     } else {
       const li = document.createElement("li");
+      const btn = document.createElement('button');
+
       li.classList.add("list__item");
       li.textContent = value;
 
+      function removeItem () {
+        ul.removeChild(li);
+        btn.removeEventListener('clicl', removeItem);    
+      }
+
+      btn.addEventListener('click', removeItem);
+
+      li.appendChild(btn);
       ul.appendChild(li);
       input.value = "";
     }

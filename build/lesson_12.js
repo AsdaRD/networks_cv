@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 15);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -77,26 +77,24 @@
 /* 10 */,
 /* 11 */,
 /* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(16);
+module.exports = __webpack_require__(14);
 
 
 /***/ }),
-/* 16 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(17);
+__webpack_require__(15);
 
-var _greet = __webpack_require__(18);
+var _greet = __webpack_require__(16);
 
-var _list = __webpack_require__(20);
+var _list = __webpack_require__(18);
 
 var button = document.querySelector('#btn');
 var content = document.querySelector('.content');
@@ -140,13 +138,13 @@ function analize() {
 analize();
 
 /***/ }),
-/* 17 */
+/* 15 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 18 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -157,7 +155,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.greetWidget = undefined;
 
-__webpack_require__(19);
+__webpack_require__(17);
 
 function greetWidget() {
     var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector('body');
@@ -208,13 +206,13 @@ function greetWidget() {
 exports.greetWidget = greetWidget;
 
 /***/ }),
-/* 19 */
+/* 17 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 20 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -225,7 +223,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.list = list;
 
-__webpack_require__(21);
+__webpack_require__(19);
 
 function list() {
   var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector("body");
@@ -260,10 +258,20 @@ function list() {
     if (value === "") {
       return false;
     } else {
+      var removeItem = function removeItem() {
+        ul.removeChild(li);
+        btn.removeEventListener('clicl', removeItem);
+      };
+
       var li = document.createElement("li");
+      var btn = document.createElement('button');
+
       li.classList.add("list__item");
       li.textContent = value;
 
+      btn.addEventListener('click', removeItem);
+
+      li.appendChild(btn);
       ul.appendChild(li);
       input.value = "";
     }
@@ -271,7 +279,7 @@ function list() {
 }
 
 /***/ }),
-/* 21 */
+/* 19 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
