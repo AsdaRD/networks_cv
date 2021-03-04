@@ -13,7 +13,7 @@ fruits.pop();
 
 
 // es6
-class User {
+class Person {
     constructor(firstName, SecondName, email, age) {
         this.firstName = firstName;
         this.SecondName = SecondName;
@@ -23,20 +23,50 @@ class User {
     }
 
     greet() {
-        return `Hello my name is ${this.firstName} ${this.SecondName}`;
+        return this._createGreetPhrase();
     }
-    test() {
-        console.log('Hello world');
+    _createGreetPhrase() {
+        return `Hello my name is ${this.firstName} ${this.SecondName}`;
     }
 }
 
+class Developer extends Person {
+    constructor(firstName, SecondName, email, age, lang) {
+        super(firstName, SecondName, email, age);
+        this.lang = lang;
+    }
+
+    code() {
+        console.log('Write code on' + this.lang);
+    }
+}
+// constructor 
+// function User(firstName, SecondName, email, age) {
+//     this.firstName = firstName;
+//     this.SecondName = SecondName;
+//     this.email = email;
+//     this.newField = 'human';
+//     this.age = age;
+// }
+// prototype
+// User.prototype.greet = function () {
+//     return `Hello my name is ${this.firstName} ${this.SecondName}`;
+// }
+// User.prototype.test = function () {
+//     console.log('Hello world');
+// }
+
 //Object
 const users = [
-    new User('Vasya', 'Ivanov', 'vasya@gmail.com', 20),
-    new User('Jack', 'Daniels', 'vasya@gmail.com', 20), 
-    new User('John', 'Doe', 'vasya@gmail.com', 20), 
-    new User('Tony', 'Stark', 'vasya@gmail.com', 20), 
+    new Person('Vasya', 'Ivanov', 'vasya@gmail.com', 20),
+    new Developer('Jack', 'Daniels', 'vasya@gmail.com', 20, 'js'), 
+    new Person('John', 'Doe', 'vasya@gmail.com', 20), 
+    new Developer('Tony', 'Stark', 'vasya@gmail.com', 20, 'php'), 
 ];
+
+console.log(users[0]);
+console.log(users[1]);
+
 const body = document.querySelector('body');
 
 for(const user of users) {
