@@ -60,35 +60,35 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 32);
+/******/ 	return __webpack_require__(__webpack_require__.s = 39);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 32:
+/***/ 39:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(33);
+module.exports = __webpack_require__(40);
 
 
 /***/ }),
 
-/***/ 33:
+/***/ 40:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _dom = __webpack_require__(34);
+var _dom = __webpack_require__(41);
 
-__webpack_require__(35);
+__webpack_require__(42);
 
 var buttons = document.querySelectorAll('.btn');
 (0, _dom.TrafficLightWidget)(buttons);
 
 /***/ }),
 
-/***/ 34:
+/***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -156,7 +156,7 @@ exports.TrafficLightWidget = TrafficLightWidget;
 
 /***/ }),
 
-/***/ 35:
+/***/ 42:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

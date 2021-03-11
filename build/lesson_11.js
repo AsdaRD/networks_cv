@@ -60,36 +60,28 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */
+/******/ ({
+
+/***/ 17:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(11);
+module.exports = __webpack_require__(18);
 
 
 /***/ }),
-/* 11 */
+
+/***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(12);
+__webpack_require__(19);
 
-var _dom = __webpack_require__(13);
+var _dom = __webpack_require__(20);
 
 var widgets = document.querySelectorAll('.greet-widget');
 
@@ -120,13 +112,15 @@ try {
 }
 
 /***/ }),
-/* 12 */
+
+/***/ 19:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 13 */
+
+/***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -169,4 +163,5 @@ function greetWidget(rootElement) {
 exports.greetWidget = greetWidget;
 
 /***/ })
-/******/ ]);
+
+/******/ });

@@ -11,6 +11,7 @@ const baseConf = (_path) => {
     const entry = {
         index: ['./src/index/index.js'],
         'meeting_5': ['./src/meeting_5/meeting_5.js'],
+        'meeting_6': ['./src/meeting_6/meeting_6.js'],
         'lesson_11': ['./src/lesson_11/lesson_11.js'],
         'lesson_12': ['./src/lesson_12/lesson_12.js'],
         'lesson_13': ['./src/lesson_13/lesson_13.js'],
@@ -95,7 +96,10 @@ const baseConf = (_path) => {
                      * You can add here any file extension you want to get copied to your output
                      */
                     test: /\.(png|jpg|jpeg|gif|svg)$/,
-                    loader: 'file-loader?publicPath=./&name=assets/images/[name].[ext]'
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'images'
+                    }
                 },
                 {
                     test: /\.(eot|ttf|woff|woff2)$/,

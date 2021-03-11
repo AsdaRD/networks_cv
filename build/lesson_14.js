@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 26);
+/******/ 	return __webpack_require__(__webpack_require__.s = 33);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -78,7 +78,7 @@ exports.Button = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(29);
+__webpack_require__(36);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -120,25 +120,25 @@ var Button = exports.Button = function () {
 
 /***/ }),
 
-/***/ 26:
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(27);
+module.exports = __webpack_require__(34);
 
 
 /***/ }),
 
-/***/ 27:
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(28);
+__webpack_require__(35);
 
 var _button = __webpack_require__(1);
 
-var _modal = __webpack_require__(30);
+var _modal = __webpack_require__(37);
 
 var modalWindow = new _modal.Modal();
 window.modalWindow = modalWindow;
@@ -159,21 +159,21 @@ new _button.Button(undefined, 'Show alert', function () {
 
 /***/ }),
 
-/***/ 28:
+/***/ 35:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 29:
+/***/ 36:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 30:
+/***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -188,7 +188,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _button = __webpack_require__(1);
 
-__webpack_require__(31);
+__webpack_require__(38);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -237,7 +237,7 @@ var Modal = exports.Modal = function () {
 
 /***/ }),
 
-/***/ 31:
+/***/ 38:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

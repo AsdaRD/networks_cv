@@ -60,42 +60,30 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 21);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */
+/******/ ({
+
+/***/ 21:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(15);
+module.exports = __webpack_require__(22);
 
 
 /***/ }),
-/* 15 */
+
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(16);
+__webpack_require__(23);
 
-var _greet = __webpack_require__(17);
+var _greet = __webpack_require__(24);
 
-var _list = __webpack_require__(19);
+var _list = __webpack_require__(26);
 
 var button = document.querySelector('#btn');
 var content = document.querySelector('.content');
@@ -139,13 +127,15 @@ function analize() {
 analize();
 
 /***/ }),
-/* 16 */
+
+/***/ 23:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 17 */
+
+/***/ 24:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -156,7 +146,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.greetWidget = undefined;
 
-__webpack_require__(18);
+__webpack_require__(25);
 
 function greetWidget() {
     var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector('body');
@@ -207,13 +197,15 @@ function greetWidget() {
 exports.greetWidget = greetWidget;
 
 /***/ }),
-/* 18 */
+
+/***/ 25:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 19 */
+
+/***/ 26:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -224,7 +216,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.list = list;
 
-__webpack_require__(20);
+__webpack_require__(27);
 
 function list() {
   var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector("body");
@@ -280,10 +272,12 @@ function list() {
 }
 
 /***/ }),
-/* 20 */
+
+/***/ 27:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
-/******/ ]);
+
+/******/ });
