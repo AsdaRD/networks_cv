@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -77,24 +77,25 @@
 /* 10 */,
 /* 11 */,
 /* 12 */,
-/* 13 */
+/* 13 */,
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(14);
+module.exports = __webpack_require__(15);
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(15);
+__webpack_require__(16);
 
-var _greet = __webpack_require__(16);
+var _greet = __webpack_require__(17);
 
-var _list = __webpack_require__(18);
+var _list = __webpack_require__(19);
 
 var button = document.querySelector('#btn');
 var content = document.querySelector('.content');
@@ -138,13 +139,13 @@ function analize() {
 analize();
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -155,7 +156,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.greetWidget = undefined;
 
-__webpack_require__(17);
+__webpack_require__(18);
 
 function greetWidget() {
     var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector('body');
@@ -206,13 +207,13 @@ function greetWidget() {
 exports.greetWidget = greetWidget;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -223,7 +224,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.list = list;
 
-__webpack_require__(19);
+__webpack_require__(20);
 
 function list() {
   var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector("body");
@@ -279,7 +280,7 @@ function list() {
 }
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

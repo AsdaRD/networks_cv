@@ -1,0 +1,38 @@
+.btn {
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  border-radius: 5px;
+  color: #ddd; }
+  .btn:hover {
+    color: #999;
+    border-color: #999; }
+.modal__content {
+  min-height: 100px;
+  min-width: 100px;
+  background-color: white;
+  border-radius: 5px; }
+
+.modal__outlet {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  pointer-events: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out; }
+  .modal__outlet_active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+    pointer-events: inherit; }
