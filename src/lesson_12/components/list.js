@@ -38,7 +38,7 @@ export function list(target = document.querySelector("body")) {
 
       function removeItem () {
         ul.removeChild(li);
-        btn.removeEventListener('clicl', removeItem);    
+        btn.removeEventListener('click', removeItem);    
       }
 
       btn.addEventListener('click', removeItem);
