@@ -7,12 +7,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    &__img {
-        width: 50px;
-        &:hover {
-            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.123), 0 17px 50px 0 rgba(0, 0, 0, 0.096);
-          }
-    }
     &__top_bottom_container {
         height: 110px;
         display: flex;
