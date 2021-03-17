@@ -60,12 +60,17 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */,
-/* 1 */,
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/dd64e87604f32a7952407e82d1392e0e.png";
+
+/***/ }),
 /* 2 */,
 /* 3 */,
 /* 4 */,
@@ -75,36 +80,37 @@
 /* 8 */,
 /* 9 */,
 /* 10 */,
-/* 11 */
+/* 11 */,
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(12);
+module.exports = __webpack_require__(13);
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(13);
+__webpack_require__(14);
 
-var _car = __webpack_require__(14);
+var _car = __webpack_require__(15);
 
-var _controller = __webpack_require__(17);
+var _controller = __webpack_require__(18);
 
-new _controller.Controller(undefined);
 new _car.Car(undefined);
+new _controller.Controller(undefined, undefined);
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -117,54 +123,50 @@ exports.Car = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(15);
+__webpack_require__(16);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Car = exports.Car = function () {
     function Car() {
         var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector('body');
-        var speed = arguments[1];
 
         _classCallCheck(this, Car);
 
         this._target = target;
-        this._speed = speed;
         this.render();
-        this.left();
     }
 
     _createClass(Car, [{
         key: 'render',
         value: function render() {
+            this._container = document.createElement('div');
+            this._container.classList.add('car__container');
             this._image = document.createElement('img');
-            this._image.src = __webpack_require__(16);
+            this._image.src = __webpack_require__(17);
             this._image.classList.add('car');
-            this._target.appendChild(this._image);
+            this._target.appendChild(this._container);
+            this._container.appendChild(this._image);
         }
-        // left() {
-        //     this.classList.add('car__left');
-        // }
-
     }]);
 
     return Car;
 }();
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/0c4e9ed56c34071cd30b6338c918130f.png";
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -177,34 +179,71 @@ exports.Controller = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(18);
+__webpack_require__(19);
+
+var _icon = __webpack_require__(20);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Controller = exports.Controller = function () {
     function Controller() {
         var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector('body');
+        var speed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 50;
 
         _classCallCheck(this, Controller);
 
+        this._speed = speed;
         this._target = target;
+        this._margin = 0;
         this.render();
     }
 
     _createClass(Controller, [{
         key: 'render',
         value: function render() {
-            this._image = document.createElement('img');
-            this._image.src = __webpack_require__(19);
-            this._image.classList.add('controller');
-            this._target.appendChild(this._image);
-            this._button_left = document.createElement('button');
-            this._button_left.classList.add('button_left');
-        }
-    }, {
-        key: 'left',
-        value: function left() {
-            this.classList.add('car__left');
+            var _this = this;
+
+            this._car = document.querySelector('.car');
+
+            this._container = document.createElement('div');
+            this._container.classList.add('container');
+
+            this._controller = document.createElement('div');
+            this._controller.classList.add('container__controller');
+
+            this._speedometer = document.createElement('div');
+            this._speedometer.classList.add('container__speedometer');
+            this._speedometer.textContent = this._speed + 'px/click';
+
+            this._image_left = new _icon.Icon(this._controller, __webpack_require__(1), function () {
+                _this._car.style.marginRight = _this._margin + _this._speed + 'px';
+                _this._car.classList.add('left');
+                _this._margin = _this._margin + _this._speed;
+            });
+
+            this._top_bottom_container = document.createElement('div');
+            this._top_bottom_container.classList.add('container__controller__top_bottom_container');
+
+            this._controller.appendChild(this._top_bottom_container);
+            this._image_top = new _icon.Icon(this._top_bottom_container, __webpack_require__(22), function () {
+                _this._speed = _this._speed + 50;
+                _this._speedometer.textContent = _this._speed + 'px/click';
+            });
+            this._image_down = new _icon.Icon(this._top_bottom_container, __webpack_require__(23), function () {
+                _this._speed = _this._speed - 50;
+                _this._speedometer.textContent = _this._speed + 'px/click';
+            });
+
+            this._image_right = new _icon.Icon(this._controller, __webpack_require__(24), function () {
+
+                _this._car.style.marginRight = _this._margin - _this._speed + 'px';
+                _this._car.classList.remove('left');
+                _this._margin = _this._margin - _this._speed;
+            });
+
+            this._container.appendChild(this._controller);
+            this._container.appendChild(this._speedometer);
+            this._target.appendChild(this._container);
         }
     }]);
 
@@ -212,16 +251,84 @@ var Controller = exports.Controller = function () {
 }();
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "images/c9d38e52c4042cf36e338dda18f1ec7e.png";
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Icon = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(21);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Icon = exports.Icon = function () {
+    function Icon() {
+        var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector('body');
+        var src = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : __webpack_require__(1);
+        var onClick = arguments[2];
+
+        _classCallCheck(this, Icon);
+
+        this.target = target;
+        this.src = src;
+        this.onClick = onClick;
+        this.render();
+    }
+
+    _createClass(Icon, [{
+        key: 'render',
+        value: function render() {
+            var _this = this;
+
+            this.icon = document.createElement('img');
+            this.icon.src = this.src;
+            this.icon.classList.add('icon');
+            this.target.appendChild(this.icon);
+            this.icon.addEventListener('click', function (e) {
+                _this.onClick(e);
+            });
+        }
+    }]);
+
+    return Icon;
+}();
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/149c1db2f30423aac9c7d61372a32619.png";
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/2240b0c0645ab6847bc2f7016caa0b32.png";
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/c7dbe353d9199b2667e5a01063b00cc4.png";
 
 /***/ })
 /******/ ]);

@@ -6,7 +6,6 @@ export class Icon {
         this.src = src;
         this.onClick = onClick
         this.render();
-        // this.left();
     }
     render() {
         this.icon = document.createElement('img');
@@ -16,9 +15,5 @@ export class Icon {
         this.icon.addEventListener('click', (e) => {
             this.onClick(e);
         });
-        // console.log('icon', this.icon)
     }
-    // left() {
-    //     this.classList.add('car__left');
-    // }
 }

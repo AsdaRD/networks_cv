@@ -1,11 +1,9 @@
 import './car.scss';
 
 export class Car{
-    constructor (target = document.querySelector('body'), speed) {
+    constructor (target = document.querySelector('body')) {
         this._target = target;
-        this._speed = speed;
         this.render();
-        // this.left();
     }
     render() {
         this._container = document.createElement('div');
@@ -16,7 +14,4 @@ export class Car{
         this._target.appendChild(this._container);
         this._container.appendChild(this._image);
     }
-    // left() {
-    //     this.classList.add('car__left');
-    // }
 }
