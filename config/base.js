@@ -10,6 +10,7 @@ const baseConf = (_path) => {
     const VENDORS_NAME = 'vendors';
     const entry = {
         index: ['./src/index/index.js'],
+        'game': ['./src/game/game.js'],
         'meeting_5': ['./src/meeting_5/meeting_5.js'],
         'meeting_6': ['./src/meeting_6/meeting_6.js'],
         'lesson_11': ['./src/lesson_11/lesson_11.js'],
