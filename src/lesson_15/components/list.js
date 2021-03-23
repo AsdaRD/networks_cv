@@ -1,7 +1,7 @@
 export class List {
     constructor(target = document.querySelector('body')) {
         this._target = target;
-        this._tasks = [];
+        this._tasks = [];// COLLECTION
         this.render();
         this.fetchData();
     }
@@ -13,10 +13,21 @@ export class List {
     }
 
     renderList() {
-        const lis = [];
-        for(const task of this._tasks) {
+        for(const task of this._tasks) {// MODEL
             console.log(task);
+            const li = this.renderOne(task);
+            this._ul.appendChild(li);
         }
+    }
+
+    renderOne(task) {
+        const li = document.createElement('li');
+        li.textContent = task.title;
+        li.id = task.id;
+        if (task.completed) {
+            li.classList.add('task__completed');
+        }
+        return li;
     }
 
     fetchData() {
@@ -34,7 +45,7 @@ export class List {
                 this.renderList();
             }
         }
-        xhr.addEventListener('readystatechange', stateChangeHandler());
+        xhr.addEventListener('readystatechange', stateChangeHandler);
 
     }
 }

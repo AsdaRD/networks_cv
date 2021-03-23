@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 21);
+/******/ 	return __webpack_require__(__webpack_require__.s = 23);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -143,36 +143,38 @@ module.exports = __webpack_require__.p + "images/dd64e87604f32a7952407e82d1392e0
 /* 18 */,
 /* 19 */,
 /* 20 */,
-/* 21 */
+/* 21 */,
+/* 22 */,
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(22);
+module.exports = __webpack_require__(24);
 
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(23);
+__webpack_require__(25);
 
 var _car = __webpack_require__(1);
 
-var _controller = __webpack_require__(24);
+var _controller = __webpack_require__(26);
 
 new _car.Car(undefined);
 new _controller.Controller(undefined, undefined);
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -185,9 +187,9 @@ exports.Controller = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(25);
+__webpack_require__(27);
 
-var _icon = __webpack_require__(26);
+var _icon = __webpack_require__(28);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -231,16 +233,16 @@ var Controller = exports.Controller = function () {
             this._top_bottom_container.classList.add('container__controller__top_bottom_container');
 
             this._controller.appendChild(this._top_bottom_container);
-            this._image_top = new _icon.Icon(this._top_bottom_container, __webpack_require__(28), function () {
+            this._image_top = new _icon.Icon(this._top_bottom_container, __webpack_require__(30), function () {
                 _this._speed = _this._speed + 50;
                 _this._speedometer.textContent = _this._speed + 'px/click';
             });
-            this._image_down = new _icon.Icon(this._top_bottom_container, __webpack_require__(29), function () {
+            this._image_down = new _icon.Icon(this._top_bottom_container, __webpack_require__(31), function () {
                 _this._speed = _this._speed - 50;
                 _this._speedometer.textContent = _this._speed + 'px/click';
             });
 
-            this._image_right = new _icon.Icon(this._controller, __webpack_require__(30), function () {
+            this._image_right = new _icon.Icon(this._controller, __webpack_require__(32), function () {
 
                 _this._car.style.marginRight = _this._margin - _this._speed + 'px';
                 _this._car.classList.remove('left');
@@ -257,13 +259,13 @@ var Controller = exports.Controller = function () {
 }();
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -276,7 +278,7 @@ exports.Icon = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(27);
+__webpack_require__(29);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -313,25 +315,25 @@ var Icon = exports.Icon = function () {
 }();
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/149c1db2f30423aac9c7d61372a32619.png";
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/2240b0c0645ab6847bc2f7016caa0b32.png";
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/c7dbe353d9199b2667e5a01063b00cc4.png";

@@ -60,106 +60,24 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 59);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 59:
+/***/ 17:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(60);
+module.exports = __webpack_require__(18);
 
 
 /***/ }),
 
-/***/ 60:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _dom = __webpack_require__(61);
-
-__webpack_require__(62);
-
-var buttons = document.querySelectorAll('.btn');
-(0, _dom.TrafficLightWidget)(buttons);
-
-/***/ }),
-
-/***/ 61:
+/***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-function TrafficLightWidget(buttons) {
-    var off = 0;
-
-    var _loop = function _loop(button) {
-        button.onclick = toggle;
-
-        function toggle() {
-            if (button.classList.contains('active')) {
-                toggleOff();
-            } else {
-                toggleOn();
-            }
-
-            function toggleOn() {
-                if (off !== 0) {
-                    off.classList.remove('active');
-                    button.classList.add('active');
-                    off = button;
-                } else {
-                    button.classList.add('active');
-                    off = button;
-                }
-            }
-
-            function toggleOff() {
-                button.classList.remove('active');
-            }
-        }
-    };
-
-    var _iteratorNormalCompletion = true;
-    var _didIteratorError = false;
-    var _iteratorError = undefined;
-
-    try {
-        for (var _iterator = buttons[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-            var button = _step.value;
-
-            _loop(button);
-        }
-    } catch (err) {
-        _didIteratorError = true;
-        _iteratorError = err;
-    } finally {
-        try {
-            if (!_iteratorNormalCompletion && _iterator.return) {
-                _iterator.return();
-            }
-        } finally {
-            if (_didIteratorError) {
-                throw _iteratorError;
-            }
-        }
-    }
-}
-exports.TrafficLightWidget = TrafficLightWidget;
-
-/***/ }),
-
-/***/ 62:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 

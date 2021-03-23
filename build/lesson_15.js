@@ -60,41 +60,41 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 53);
+/******/ 	return __webpack_require__(__webpack_require__.s = 55);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 53:
+/***/ 55:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(54);
+module.exports = __webpack_require__(56);
 
 
 /***/ }),
 
-/***/ 54:
+/***/ 56:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(55);
+__webpack_require__(57);
 
-var _list = __webpack_require__(56);
+var _list = __webpack_require__(58);
 
 var list1 = new _list.List();
 
 /***/ }),
 
-/***/ 55:
+/***/ 57:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 56:
+/***/ 58:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -115,9 +115,9 @@ var List = exports.List = function () {
         _classCallCheck(this, List);
 
         this._target = target;
-        this._tasks = [];
+        this._tasks = []; // COLLECTION
         this.render();
-        this.fetchData;
+        this.fetchData();
     }
 
     _createClass(List, [{
@@ -130,7 +130,6 @@ var List = exports.List = function () {
     }, {
         key: 'renderList',
         value: function renderList() {
-            var lis = [];
             var _iteratorNormalCompletion = true;
             var _didIteratorError = false;
             var _iteratorError = undefined;
@@ -138,8 +137,10 @@ var List = exports.List = function () {
             try {
                 for (var _iterator = this._tasks[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
                     var task = _step.value;
-
+                    // MODEL
                     console.log(task);
+                    var li = this.renderOne(task);
+                    this._ul.appendChild(li);
                 }
             } catch (err) {
                 _didIteratorError = true;
@@ -157,12 +158,23 @@ var List = exports.List = function () {
             }
         }
     }, {
+        key: 'renderOne',
+        value: function renderOne(task) {
+            var li = document.createElement('li');
+            li.textContent = task.title;
+            li.id = task.id;
+            if (task.completed) {
+                li.classList.add('task__completed');
+            }
+            return li;
+        }
+    }, {
         key: 'fetchData',
         value: function fetchData() {
             var _this = this;
 
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'https://asda-osi.github.io/webpackcfg/build/lesson_11.html');
+            xhr.open('GET', 'https://asda-osi.github.io/webpackcfg/build/STRINGLIFY');
             xhr.send();
 
             var stateChangeHandler = function stateChangeHandler() {
@@ -171,7 +183,7 @@ var List = exports.List = function () {
                         console.error('smth is wrong');
                         return;
                     }
-                    _this._tasks - JSON.parse(xhr.response);
+                    _this._tasks = JSON.parse(xhr.response);
                     _this.renderList();
                 }
             };
