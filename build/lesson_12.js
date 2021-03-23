@@ -60,30 +60,30 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 29);
+/******/ 	return __webpack_require__(__webpack_require__.s = 35);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 29:
+/***/ 35:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(30);
+module.exports = __webpack_require__(36);
 
 
 /***/ }),
 
-/***/ 30:
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(31);
+__webpack_require__(37);
 
-var _greet = __webpack_require__(32);
+var _greet = __webpack_require__(38);
 
-var _list = __webpack_require__(34);
+var _list = __webpack_require__(40);
 
 var button = document.querySelector('#btn');
 var content = document.querySelector('.content');
@@ -128,14 +128,14 @@ analize();
 
 /***/ }),
 
-/***/ 31:
+/***/ 37:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 32:
+/***/ 38:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -146,7 +146,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.greetWidget = undefined;
 
-__webpack_require__(33);
+__webpack_require__(39);
 
 function greetWidget() {
     var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector('body');
@@ -198,14 +198,14 @@ exports.greetWidget = greetWidget;
 
 /***/ }),
 
-/***/ 33:
+/***/ 39:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 34:
+/***/ 40:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -216,7 +216,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.list = list;
 
-__webpack_require__(35);
+__webpack_require__(41);
 
 function list() {
   var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector("body");
@@ -273,7 +273,7 @@ function list() {
 
 /***/ }),
 
-/***/ 35:
+/***/ 41:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

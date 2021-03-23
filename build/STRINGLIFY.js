@@ -60,68 +60,24 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 17:
+/***/ 15:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(18);
+module.exports = __webpack_require__(16);
 
 
 /***/ }),
 
-/***/ 18:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _dom = __webpack_require__(19);
-
-__webpack_require__(20);
-
-;
-
-
-var button = document.querySelector('.btn');
-var lamp = document.querySelector('.lamp');
-(0, _dom.Switcher)(button, lamp);
-
-/***/ }),
-
-/***/ 19:
+/***/ 16:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-function Switcher(button, lamp) {
-    button.onclick = toggle;
-    function toggle() {
-        if (button.innerHTML === 'ON') {
-            button.innerHTML = 'OFF';
-            lamp.style.cssText = 'background-color: limegreen; box-shadow: 0 20px 40px 0 rgba(27, 255, 6, 0.24), 0 30px 70px 0 rgba(14, 179, 22, 0.19);';
-        } else {
-            button.innerHTML = 'ON';
-            lamp.style.cssText = 'background-color: white;';
-        }
-    }
-}
-
-exports.Switcher = Switcher;
-
-/***/ }),
-
-/***/ 20:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 
