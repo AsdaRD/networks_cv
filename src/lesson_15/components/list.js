@@ -3,7 +3,7 @@ export class List {
         this._target = target;
         this._tasks = [];
         this.render();
-        this.fetchData;
+        this.fetchData();
     }
 
     render() {
@@ -21,7 +21,7 @@ export class List {
 
     fetchData() {
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://asda-osi.github.io/webpackcfg/build/lesson_11.html');
+        xhr.open('GET', 'https://asda-osi.github.io/webpackcfg/build/STRINGLIFY');
         xhr.send();
 
         const stateChangeHandler = () => {
@@ -30,11 +30,11 @@ export class List {
                     console.error('smth is wrong');
                     return;
                 }
-                this._tasks - JSON.parse(xhr.response);
+                this._tasks = JSON.parse(xhr.response);
                 this.renderList();
             }
         }
-        xhr.addEventListener('readystatechange', stateChangeHandler);
+        xhr.addEventListener('readystatechange', stateChangeHandler());
 
     }
 }
