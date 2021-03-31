@@ -9,6 +9,9 @@
   margin: 0 auto;
   max-width: 400px; }
   .dropdown__head {
+    border: none;
+    outline: none;
+    width: 100%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
@@ -19,15 +22,19 @@
     padding: 20px 25px 20px 25px;
     font-size: 1.7rem;
     color: white; }
+    .dropdown__head:hover {
+      background-color: rgba(12, 46, 217, 0.904); }
     .dropdown__head:focus {
-      outline: 3px solid #ddd; }
+      background-color: rgba(12, 46, 217, 0.904); }
   .dropdown__arrow {
     display: block;
     width: 35px;
     height: 35px; }
   .dropdown__list {
     margin: 0 auto;
+    display: none;
     max-width: 330px;
+    padding: 0;
     background-color: #000225;
     list-style-type: none; }
     .dropdown__list__elem {

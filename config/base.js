@@ -23,6 +23,7 @@ const baseConf = (_path) => {
         'hw_11': ['./src/hw_11/hw_11.js'],
         'hw_12': ['./src/hw_12/hw_12.js'],
         'hw_14': ['./src/hw_14/hw_14.js'],
+        'hw_15': ['./src/hw_15/hw_15.js'],
         'dropdown_hw_15': ['./src/dropdown_hw_15/dropdown_hw_15.js'],
         
     };

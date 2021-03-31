@@ -1,5 +1,3 @@
-import { createElement } from "react";
-
 export function comments (target = document.querySelector('body')) {
     
     const root = document.createElement('div');
@@ -60,7 +58,15 @@ export function comments (target = document.querySelector('body')) {
         const year = date.getFullYear();
         const hours = date.getHours();
         const minutes = date.getMinutes();
+        if (hours < 10 && minutes < 10) {
+            comment_date.textContent = `${day}.${month}.${year} in 0${hours}:0${minutes}`;
+        }else if (hours < 10 && minutes > 10) {
+            comment_date.textContent = `${day}.${month}.${year} in 0${hours}:${minutes}`;
+        } else if (hours > 10 && minutes < 10) {
+            comment_date.textContent = `${day}.${month}.${year} in ${hours}:0${minutes}`;
+        } else {
         comment_date.textContent = `${day}.${month}.${year} in ${hours}:${minutes}`;
+        }
         li.appendChild(comment_date);    
     }
 }
