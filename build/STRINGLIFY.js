@@ -74,9 +74,10 @@ module.exports = __webpack_require__(14);
 /***/ }),
 
 /***/ 14:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "[{\"completed\":false,\"title\":\"Test\",\"id\":1553106523767},{\"completed\":true,\"title\":\"Hello\",\"id\":1553106523772}]\n";
+"use strict";
+
 
 /***/ })
 

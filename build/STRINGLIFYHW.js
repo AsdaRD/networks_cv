@@ -74,9 +74,10 @@ module.exports = __webpack_require__(16);
 /***/ }),
 
 /***/ 16:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "[{\"author\":\"Jack Jones\",\"date\":\"20.3.2019 in 18:28\",\"text\":\"Hello world, I am a dummy comment\",\"id\":\"06550945\"},{\"author\":\"John Smith\",\"date\":\"20.3.2019 in 18:28\",\"text\":\"Hello world, I am dummy comment!!\",\"id\":\"0a23746d\"}]";
+"use strict";
+
 
 /***/ })
 
