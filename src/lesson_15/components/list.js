@@ -32,7 +32,7 @@ export class List {
 
     fetchData() {
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://asda-osi.github.io/webpackcfg/build/STRINGLIFY');
+        xhr.open('GET', 'https://asda-osi.github.io/json/stringlify.html');
         xhr.send();
 
         const stateChangeHandler = () => {

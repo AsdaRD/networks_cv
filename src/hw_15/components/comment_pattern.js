@@ -18,7 +18,7 @@ export class Comment {
     }
     fetchData() {
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://asda-osi.github.io/webpackcfg/build/STRINGLIFYHW');
+        xhr.open('GET', 'https://asda-osi.github.io/json/stringlifyhw.html');
         xhr.send();
 
         const stateChangeHandler = () => {
