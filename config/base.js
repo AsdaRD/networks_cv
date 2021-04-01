@@ -11,8 +11,8 @@ const baseConf = (_path) => {
     const entry = {
         index: ['./src/index/index.js'],
         'game': ['./src/game/game.js'],
-        'STRINGLIFY': ['./src/STRINGLIFY/STRINGLIFY.js'],
-        'STRINGLIFYHW': ['./src/STRINGLIFYHW/STRINGLIFYHW.js'],
+        'stringlify': ['./src/stringlify/stringlify.js'],
+        'stringlifyhw': ['./src/stringlifyhw/stringlifyhw.js'],
         'meeting_5': ['./src/meeting_5/meeting_5.js'],
         'meeting_6': ['./src/meeting_6/meeting_6.js'],
         'lesson_11': ['./src/lesson_11/lesson_11.js'],
