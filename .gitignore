@@ -38,3 +38,7 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# Stringlify without js
+STRINGLIFY.js
+STRINGLIFYHW.js
+
