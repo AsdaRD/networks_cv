@@ -1,11 +1,38 @@
 // import './comment_pattern.scss'
-import { API } from './api';
 import { Comments_list } from './comments';
 
 export class Comment {
     constructor(target = document.querySelector('body')) {
     this._target = target;
+    this._tasks = [];
     this.render();
+    this.fetchData();
+
+    }
+    renderList() {
+        for(const task of this._tasks) {// MODEL
+            // console.log(task);
+            this._api = new Comments_list(this._list, task.author, task.text, task.date);
+            console.log(this._api);
+        }
+    }
+    fetchData() {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://asda-osi.github.io/webpackcfg/build/STRINGLIFYHW');
+        xhr.send();
+
+        const stateChangeHandler = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status !== 200) {
+                    console.error('smth is wrong');
+                    return;
+                }
+                this._tasks = JSON.parse(xhr.response);
+                this.renderList();
+            }
+        }
+        xhr.addEventListener('readystatechange', stateChangeHandler);
+
     }
 
     render() {
@@ -35,16 +62,16 @@ export class Comment {
         this._submit_button.appendChild(this._bold);
         this._root.appendChild(this._form);
         this._root.appendChild(this._list);
-        this._api = new API(this._list);
         this._target.appendChild(this._root);
 
-        // console.log(this._api);
-        // this._list.appendChild(this._api);
         
         this._form.addEventListener('submit', (eventObject) => {
             eventObject.preventDefault();
-            this._comments_list = new Comments_list(this._author.value, this._comment_area.value, '2019-03-20T18:28:43.765Z');
-            this._list.appendChild(this._comments_list);
+            if(this._author.value !== '' && this._comment_area.value !== '') {
+                this._comments_list = new Comments_list(this._list, this._author.value, this._comment_area.value);
+                this._author.value = '';
+                this._comment_area.value = '';
+            }
         })
     }
 };

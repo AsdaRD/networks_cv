@@ -60,24 +60,23 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 17:
+/***/ 15:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(18);
+module.exports = __webpack_require__(16);
 
 
 /***/ }),
 
-/***/ 18:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 16:
+/***/ (function(module, exports) {
 
-"use strict";
-
+module.exports = "[{\"author\":\"Jack Jones\",\"date\":\"20.3.2019 in 18:28\",\"text\":\"Hello world, I am a dummy comment\",\"id\":\"06550945\"},{\"author\":\"John Smith\",\"date\":\"20.3.2019 in 18:28\",\"text\":\"Hello world, I am dummy comment!!\",\"id\":\"0a23746d\"}]";
 
 /***/ })
 
