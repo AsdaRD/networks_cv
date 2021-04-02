@@ -60,107 +60,43 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 33);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 33:
+/***/ 17:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(34);
+module.exports = __webpack_require__(18);
 
 
 /***/ }),
 
-/***/ 34:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(35);
-
-var _dom = __webpack_require__(36);
-
-var widgets = document.querySelectorAll('.greet-widget');
-
-var _iteratorNormalCompletion = true;
-var _didIteratorError = false;
-var _iteratorError = undefined;
-
-try {
-    for (var _iterator = widgets[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        var widgetElement = _step.value;
-
-        console.log(widgetElement);
-        (0, _dom.greetWidget)(widgetElement);
-    }
-} catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-} finally {
-    try {
-        if (!_iteratorNormalCompletion && _iterator.return) {
-            _iterator.return();
-        }
-    } finally {
-        if (_didIteratorError) {
-            throw _iteratorError;
-        }
-    }
-}
-
-/***/ }),
-
-/***/ 35:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 36:
+/***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-function greetWidget(rootElement) {
-    var button = rootElement.querySelector('.greet-widget__btn');
-    var title = rootElement.querySelector('.greet-widget__title');
-    var isActive = true;
-
-    button.onclick = toggle;
-
-    function toggle() {
-        if (isActive) {
-            toggleOff();
-        } else {
-            toggleOn();
-        }
-    }
-
-    function toggleOn() {
-        button.classList.add('btn_active');
-        rootElement.classList.add('greet-widget_active');
-        title.classList.add('greet-widget__title_active');
-        isActive = true;
-    }
-
-    function toggleOff() {
-        button.classList.remove('btn_active');
-        rootElement.classList.remove('greet-widget_active');
-        title.classList.remove('greet-widget__title_active');
-        isActive = false;
-    }
-    toggle();
-}
-
-exports.greetWidget = greetWidget;
+var verseChoose = document.querySelector('select');
+var poemDisplay = document.querySelector('pre');
+verseChoose.onchange = function () {
+  var verse = verseChoose.value;
+  updateDisplay(verse);
+};
+function updateDisplay(verse) {
+  verse = verse.replace(" ", "");
+  verse = verse.toLowerCase();
+  var url = verse + '.txt';
+  fetch(url).then(function (response) {
+    response.text().then(function (text) {
+      poemDisplay.textContent = text;
+    });
+  });
+};
+updateDisplay('Verse 1');
+verseChoose.value = 'Verse 1';
 
 /***/ })
 

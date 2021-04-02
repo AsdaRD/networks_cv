@@ -60,37 +60,16 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 53);
+/******/ 	return __webpack_require__(__webpack_require__.s = 55);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 53:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(54);
-
-
-/***/ }),
-
-/***/ 54:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(55);
-
-var _list = __webpack_require__(56);
-
-var list1 = new _list.List();
-
-/***/ }),
-
 /***/ 55:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+module.exports = __webpack_require__(56);
+
 
 /***/ }),
 
@@ -100,11 +79,35 @@ var list1 = new _list.List();
 "use strict";
 
 
+__webpack_require__(57);
+
+var _list = __webpack_require__(58);
+
+var list1 = new _list.List();
+
+/***/ }),
+
+/***/ 57:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 58:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.List = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(59);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -121,10 +124,47 @@ var List = exports.List = function () {
     }
 
     _createClass(List, [{
+        key: 'onSubmit',
+        value: function onSubmit(e) {
+            var _this = this;
+
+            e.preventDefault();
+            var value = this._input.value;
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'localhost:8080/stringlify.html');
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify({ title: value }));
+
+            var stateChangeHandler = function stateChangeHandler() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status !== 200) {
+                        console.error('smth is wrong');
+                        return;
+                    }
+                    var newItem = _this.renderOne(JSON.parse(xhr.response));
+                    _this._ul.appendChild(newItem);
+                    _this._input.value = '';
+                }
+            };
+            xhr.addEventListener('readystatechange', stateChangeHandler);
+        }
+    }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
+            this._form = document.createElement('form');
+            this._input = document.createElement('input');
+            this._input.type = 'text';
+            this._form.appendChild(this._input);
+
+            this._form.addEventListener('submit', function (e) {
+                return _this2.onSubmit(e);
+            });
+
             this._ul = document.createElement('ul');
             this._ul.classList.add('todos');
+            this._target.appendChild(this._form);
             this._target.appendChild(this._ul);
         }
     }, {
@@ -171,10 +211,10 @@ var List = exports.List = function () {
     }, {
         key: 'fetchData',
         value: function fetchData() {
-            var _this = this;
+            var _this3 = this;
 
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'https://asda-osi.github.io/webpackcfg/build/STRINGLIFY');
+            xhr.open('GET', 'https://asda-osi.github.io/json/stringlify.html');
             xhr.send();
 
             var stateChangeHandler = function stateChangeHandler() {
@@ -183,8 +223,8 @@ var List = exports.List = function () {
                         console.error('smth is wrong');
                         return;
                     }
-                    _this._tasks = JSON.parse(xhr.response);
-                    _this.renderList();
+                    _this3._tasks = JSON.parse(xhr.response);
+                    _this3.renderList();
                 }
             };
             xhr.addEventListener('readystatechange', stateChangeHandler);
@@ -193,6 +233,13 @@ var List = exports.List = function () {
 
     return List;
 }();
+
+/***/ }),
+
+/***/ 59:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 

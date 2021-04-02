@@ -1,0 +1,10 @@
+.todos {
+
+}
+
+.task {
+    &__completed {
+        color: grey;
+        text-decoration: line-through;
+    }
+}

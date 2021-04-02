@@ -1,3 +1,4 @@
+import './list.scss';
 export class List {
     constructor(target = document.querySelector('body')) {
         this._target = target;
@@ -6,9 +7,39 @@ export class List {
         this.fetchData();
     }
 
+    onSubmit(e) {
+        e.preventDefault();
+        const value = this._input.value;
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'localhost:8080/xhr-basic.html');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({title: value}));
+
+        const stateChangeHandler = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status !== 200) {
+                    console.error('smth is wrong');
+                    return;
+                }
+                const newItem = this.renderOne(JSON.parse(xhr.response));
+                this._ul.appendChild(newItem);
+                this._input.value = '';
+            }
+        }
+        xhr.addEventListener('readystatechange', stateChangeHandler);
+    }
+
     render() {
+        this._form = document.createElement('form');
+        this._input = document.createElement('input');
+        this._input.type = 'text';
+        this._form.appendChild(this._input);
+
+        this._form.addEventListener('submit', (e) => this.onSubmit(e));
+
         this._ul = document.createElement('ul');
         this._ul.classList.add('todos');
+        this._target.appendChild(this._form);
         this._target.appendChild(this._ul);
     }
 
