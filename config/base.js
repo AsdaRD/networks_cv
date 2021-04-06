@@ -10,22 +10,6 @@ const baseConf = (_path) => {
     const VENDORS_NAME = 'vendors';
     const entry = {
         index: ['./src/index/index.js'],
-        'game': ['./src/game/game.js'],
-        'stringlify': ['./src/stringlify/stringlify.js'],
-        'stringlifyhw': ['./src/stringlifyhw/stringlifyhw.js'],
-        'xhr-basic': ['./src/xhr-basic/xhr-basic.js'],
-        'meeting_5': ['./src/meeting_5/meeting_5.js'],
-        'meeting_6': ['./src/meeting_6/meeting_6.js'],
-        'lesson_11': ['./src/lesson_11/lesson_11.js'],
-        'lesson_12': ['./src/lesson_12/lesson_12.js'],
-        'lesson_13': ['./src/lesson_13/lesson_13.js'],
-        'lesson_14': ['./src/lesson_14/lesson_14.js'],
-        'lesson_15': ['./src/lesson_15/lesson_15.js'],
-        'hw_11': ['./src/hw_11/hw_11.js'],
-        'hw_12': ['./src/hw_12/hw_12.js'],
-        'hw_14': ['./src/hw_14/hw_14.js'],
-        'hw_15': ['./src/hw_15/hw_15.js'],
-        'dropdown_hw_15': ['./src/dropdown_hw_15/dropdown_hw_15.js'],
         
     };
 
