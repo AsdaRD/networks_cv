@@ -1,8 +1,17 @@
+$font-size-small: 1.29rem;
+$font-size-medium: 1.7rem;
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 14px;
 }
 
 .header {
+  padding: 1.5vh 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -11,17 +20,17 @@
     padding: 1vh 0 1vh 11vw;
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
   &__logo {
-    width: 75px;
+    width: 5.7rem;
   }
   &__caption {
-    font-size: 14px;
+    font-size: 1rem;
     margin-left: 1rem;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 800;
-    // line-height: 18px;
     color: #005BBB;
   }
   &__contacts-lang {
@@ -34,43 +43,130 @@
     font-style: normal;
     color: #0D0D0D;
     font-weight: 600;
-    font-size: 1.29rem;
-    line-height: 24px;
+    font-size: $font-size-small;
     text-decoration: none;
-    // border-bottom: 6px solid #005BBB;
   }
   &__border {
     background-color: #005BBB;
-    height: 6px;
-    border-radius: 4px;
+    height: 0.4rem;
+    margin-top: 0.14rem;
+    border-radius: 0.3rem;
   }
 }
 
 .team {
   display: flex;
   flex-direction: column;
-  margin-top: 8vh;
+  padding-top: 7vh;
   &__header {
-    margin-left: 8vw;
+    padding-left: 5vw;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 800;
-    font-size: 30px;
-    line-height: 18px;
+    font-size: $font-size-medium;
     color: #000000;
   }
   &__article {
     display: flex;
+    flex-direction: column;
+  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  &__card {
+    padding-top: 7.3vh;
+    // width: 432px;
+    display: flex;
     flex-direction: row;
   }
-  &__column {
-    display: flex;
-    flex-direction: column;
-    margin-left: 12vw;
-  }
+  &__avatar-cv {
+  display: flex;
+  flex-direction: column;
+}
   &__avatar {
-    width: 187px;
-    height: 187px;
-    border-radius: 100px;
+    width: 13.36rem;
+    height: 13.36rem;
+    border-radius: 100%;
+  }
+  &__cv {
+    background-color: transparent;
+    padding-top: 1rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $font-size-small;
+    color: #005BBB;
+  }
+  &__frame {
+    padding-top: 2.9rem;
+    padding-left: 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  &__name {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $font-size-medium;
+    color: #000000;
+    padding-bottom: 1.1rem;
+  }
+  &__position {
+    background: #005BBB;
+    border-radius: 78px;
+    padding: 0.64rem 1rem;
+
+    &-content {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: $font-size-small;
+      color: #FFFFFF;
+    }
+  }
+  &__skills {
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: $font-size-small;
+    color: #000000;
+    padding: 1.1rem 0;
+    & li {
+      &:before {
+        content: "- ";
+      }
+    }
+  }
+}
+
+// @media only screen and (max-width: 992px) {
+//   html {
+//     font-size: 18px;
+//   }
+
+//   .team__row {
+//     flex-direction: column;
+//     align-self: center;
+//   }
+  
+// }
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 1680px) {
+  html {
+    font-size: 18px;
+  }
+  .team__card {
+    width: 503px;
   }
 }
