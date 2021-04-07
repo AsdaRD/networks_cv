@@ -8,6 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <header class="header">
@@ -21,13 +23,47 @@
         </div>
     </header>    
     <main>
+        <article class="projects">
+            <header class="projects__header">
+                <h2 class="projects__header-content">Наші проекти</h2>
+            </header>
+                <section class="projects__article">
+                    <div class="projects__card" data-aos="fade-up" data-aos-duration="1000">
+                        <img class="projects__logo" src="../../assets/images/ecosmart-logo.svg" alt="ecosmart-logo">
+                        <div class="projects__frame">
+                            <h2 class="projects__name">Ecosmart</h2>
+                            <p class="projects__content">Програмно апаратний комплекс диспетчерського керування автоматизованою системою екологічного моніторингу. Побудовано на стеку технологій PHP(Yii2), MYSQL, Python. 
+                            </p>
+                            <button class="projects__btn">Переглянути</button> 
+                        </div>
+                    </div>
+                    <div class="projects__card" data-aos="fade-up" data-aos-duration="1000">
+                        <img class="projects__logo" src="../../assets/images/leaflet.svg" alt="ecomap-logo">
+                        <div class="projects__frame">
+                            <h2 class="projects__name">EcoMap</h2>
+                            <p class="projects__content">
+                                Система моніторингу стану навколишнього природного середовища. Побудовано на стеку технологій NodeJS, Postgres, VueJS. 
+                            </p>
+                            <button class="projects__btn">Дізнатися більше</button> 
+                        </div>
+                    </div>
+                    <div class="projects__card" data-aos="fade-up" data-aos-duration="1000">
+                        <img class="projects__logo" src="../../assets/images/incognitohr.svg" alt="incognitohr-logo">
+                        <div class="projects__frame">
+                            <h2 class="projects__name">IncognitoHR</h2>
+                            <p class="projects__content">Глобальна рекрутингова платформа для ІТ-спеціалістів, що забезпечує безпечний та анонімний набір персоналу. Побудовано на стеку PHP(Yii2), MYSQL.</p>
+                            <button class="projects__btn">Дізнатися більше</button> 
+                        </div>
+                    </div>
+                </section>
+        </article>
         <article class="team">
             <header class="team__header">
-                <h2 class="team__header__content">Наша команда</h2>
+                <h2>Наша команда</h2>
             </header>
             <section class="team__article">
                 <div class="team__row">
-                    <div class="team__card">
+                    <div class="team__card" data-aos="fade-up" data-aos-duration="1000">
                         <div class="team__avatar-cv">
                             <img class="team__avatar" src="../../assets/images/1608058161066.jpeg" alt="Frontend_developer">
                             <button class="team__cv">Резюме</button>
@@ -45,7 +81,45 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="team__card">
+                    <div class="team__card" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="team__avatar-cv">
+                            <img class="team__avatar" src="../../assets/images/1608058161066.jpeg" alt="Frontend_developer">
+                            <button class="team__cv">Резюме</button>
+                        </div>
+                        <div class="team__frame">
+                            <h2 class="team__name">Дмитро Шаріпов</h2>
+                            <div class="team__position">
+                                <p class="team__position-content">Fullstack developer</p>
+                            </div>
+                            <ul class="team__skills">
+                                <li>JavaScript</li>
+                                <li>NodeJS</li>
+                                <li>PHP</li>
+                                <li><span>Data analytics and data science</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__row">
+                    <div class="team__card" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="team__avatar-cv">
+                            <img class="team__avatar" src="../../assets/images/1608058161066.jpeg" alt="Frontend_developer">
+                            <button class="team__cv">Резюме</button>
+                        </div>
+                        <div class="team__frame">
+                            <h2 class="team__name">Дмитро Лукаш</h2>
+                            <div class="team__position">
+                                <p class="team__position-content">Frontend developer</p>
+                            </div>
+                            <ul class="team__skills">
+                                <li>JavaScript</li>
+                                <li>NodeJS</li>
+                                <li>PHP</li>
+                                <li>Networking and wireless</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team__card" data-aos="fade-up" data-aos-duration="1000">
                         <div class="team__avatar-cv">
                             <img class="team__avatar" src="../../assets/images/1608058161066.jpeg" alt="Frontend_developer">
                             <button class="team__cv">Резюме</button>
@@ -65,7 +139,7 @@
                     </div>
                 </div>
                 <div class="team__row">
-                    <div class="team__card">
+                    <div class="team__card" data-aos="fade-up" data-aos-duration="1000">
                         <div class="team__avatar-cv">
                             <img class="team__avatar" src="../../assets/images/1608058161066.jpeg" alt="Frontend_developer">
                             <button class="team__cv">Резюме</button>
@@ -83,27 +157,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="team__card">
-                        <div class="team__avatar-cv">
-                            <img class="team__avatar" src="../../assets/images/1608058161066.jpeg" alt="Frontend_developer">
-                            <button class="team__cv">Резюме</button>
-                        </div>
-                        <div class="team__frame">
-                            <h2 class="team__name">Дмитро Шаріпов</h2>
-                            <div class="team__position">
-                                <p class="team__position-content">Fullstack developer</p>
-                            </div>
-                            <ul class="team__skills">
-                                <li>JavaScript</li>
-                                <li>NodeJS</li>
-                                <li>PHP</li>
-                                <li>Data analytics and data science</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="team__row">
-                    <div class="team__card">
+                    <div class="team__card" data-aos="fade-up" data-aos-duration="1000">
                         <div class="team__avatar-cv">
                             <img class="team__avatar" src="../../assets/images/1608058161066.jpeg" alt="Frontend_developer">
                             <button class="team__cv">Резюме</button>
