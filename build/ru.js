@@ -64,7 +64,12 @@
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */,
+/* 0 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 1 */,
 /* 2 */,
 /* 3 */
@@ -80,13 +85,11 @@ module.exports = __webpack_require__(4);
 "use strict";
 
 
-__webpack_require__(5);
+__webpack_require__(0);
 
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+document.addEventListener("DOMContentLoaded", function (event) {
+    AOS.init();
+});
 
 /***/ })
 /******/ ]);
