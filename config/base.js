@@ -11,7 +11,7 @@ const baseConf = (_path) => {
     const entry = {
         index: ['./src/index/index.js'],
         'ru': ['./src/ru/ru.js'],
-
+        'en': ['./src/en/en.js'],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {

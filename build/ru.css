@@ -8,6 +8,7 @@ html {
 
 .header {
   padding: 2vh 0;
+  height: 6.8rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -17,7 +18,9 @@ html {
   -ms-flex-pack: justify;
       justify-content: space-between; }
   .header__banner {
-    padding: 1vh 1vw;
+    height: 100%;
+    text-decoration: none;
+    padding: 1rem 1vw;
     margin-left: 10vw;
     display: -ms-flexbox;
     display: flex;
@@ -36,23 +39,94 @@ html {
     font-weight: 800;
     color: #005BBB; }
   .header__contacts-container {
-    padding: 1vh 11vw 1vh 0;
+    height: 100%;
+    padding: 1.2rem 3rem 1rem 0;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
-        flex-direction: column; }
-  .header__contacts {
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     color: #0D0D0D;
     font-weight: 600;
+    line-height: 1.7rem;
     font-size: 1.29rem;
     text-decoration: none; }
+  .header__contacts-lang {
+    padding-right: 8vw;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
+    height: 100%; }
   .header__border {
     background-color: #005BBB;
     height: 0.4rem;
     margin-top: 0.14rem;
     border-radius: 0.3rem; }
+  .header__lang {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    color: #0D0D0D;
+    font-weight: 600;
+    font-size: 1.29rem;
+    text-decoration: none;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: space-evenly;
+        justify-content: space-evenly; }
+    .header__lang-selected {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+      -ms-flex-align: center;
+          align-items: center;
+      height: 100%;
+      width: 4rem;
+      line-height: 1.7rem; }
+      .header__lang-selected img {
+        display: block;
+        width: 1.7rem;
+        height: 1rem; }
+    .header__lang-list {
+      background-color: #ffffff;
+      width: 4rem;
+      position: absolute;
+      top: 1.7rem;
+      left: 0;
+      list-style: none;
+      display: none; }
+    .header__lang-link {
+      height: 1.7rem;
+      margin-top: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      color: #0D0D0D;
+      font-weight: 600;
+      line-height: 1.7rem;
+      font-size: 1.29rem;
+      text-decoration: none; }
+      .header__lang-link:hover {
+        border-bottom: 0.2rem solid #005BBB; }
+    .header__lang:hover .header__lang-list {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
 .team {
   display: -ms-flexbox;
@@ -116,7 +190,7 @@ html {
     border-radius: 100%; }
   .team__cv {
     background-color: transparent;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     cursor: pointer;
     border: none;
     outline: none;
@@ -241,6 +315,8 @@ html {
     line-height: 1.5rem;
     padding-bottom: 2rem; }
   .projects__btn {
+    text-align: center;
+    text-decoration: none;
     margin-top: auto;
     padding: 1rem 1.5rem;
     width: 12.7rem;
@@ -302,6 +378,7 @@ html {
         flex-direction: row;
     -ms-flex-align: center;
         align-items: center;
+    text-decoration: none;
     cursor: pointer; }
   .footer__logo {
     width: 5.7rem; }
@@ -463,6 +540,10 @@ html {
 @media screen and (max-width: 600px) {
   html {
     font-size: 12px; }
+  .header__banner {
+    margin-left: 8vw; }
+  .header__contacts-lang {
+    padding-right: 8vw; }
   .team__row {
     -ms-flex-direction: column;
         flex-direction: column; }

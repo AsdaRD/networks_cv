@@ -1,5 +1,6 @@
 $font-size-small: 1.29rem;
 $font-size-medium: 1.7rem;
+$primary-color: #005BBB;
 
 * {
   box-sizing: border-box;
@@ -11,13 +12,16 @@ html {
 }
 
 .header {
-  padding: 2vh 0;
+  padding: 2rem 0;
+  height: 10rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   &__banner {
-    padding: 1vh 1vw;
+    height: 100%;
+    text-decoration: none;
+    padding: 1rem 1vw;
     margin-left: 10vw;
     display: flex;
     flex-direction: row;
@@ -33,29 +37,96 @@ html {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 800;
-    color: #005BBB;
+    color: $primary-color;
   }
   &__contacts-container {
-    padding: 1vh 11vw 1vh 0;
+    height: 100%;
+    padding: 1.2rem 3rem 1rem 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    color: #0D0D0D;
+    font-weight: 600;
+    line-height: $font-size-medium;
+    font-size: $font-size-small;
+    text-decoration: none;
   }
   &__contacts {
+    &-lang {
+      padding-right: 8vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 100%;
+    }
+  }
+  &__border {
+    background-color: $primary-color;
+    height: 0.4rem;
+    margin-top: 0.14rem;
+    border-radius: 0.3rem;
+  }
+  &__lang {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     color: #0D0D0D;
     font-weight: 600;
     font-size: $font-size-small;
     text-decoration: none;
-  }
-  &__border {
-    background-color: #005BBB;
-    height: 0.4rem;
-    margin-top: 0.14rem;
-    border-radius: 0.3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &-selected {  
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      width: 4rem;
+      line-height: $font-size-medium;
+      & img {
+        display: block;
+        width: $font-size-medium;
+        height: 1rem;
+      }
+      
+    }
+    &-list{
+      background-color: #ffffff;
+      width: 4rem;
+      position: absolute;
+      top: $font-size-medium;
+      left: 0;
+      list-style: none;
+      display: none;
+    }
+    &-link {
+      height: $font-size-medium;
+      margin-top: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      color: #0D0D0D;
+      font-weight: 600;
+      line-height: $font-size-medium;
+      font-size: $font-size-small;
+      text-decoration: none;
+      &:hover {
+        border-bottom: 0.2rem solid $primary-color;
+      }
+    }
+    &:hover .header__lang-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
   }
 }
-
+ 
 .team {
   display: flex;
   flex-direction: column;
@@ -112,7 +183,7 @@ html {
   }
   &__cv {
     background-color: transparent;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     cursor: pointer;
     border: none;
     outline: none;
@@ -120,7 +191,7 @@ html {
     font-style: normal;
     font-weight: bold;
     font-size: $font-size-small;
-    color: #005BBB;
+    color: $primary-color;
   }
   &__frame {
     padding-top: 2.9rem;
@@ -139,7 +210,7 @@ html {
     padding-bottom: 1.1rem;
   }
   &__position {
-    background: #005BBB;
+    background: $primary-color;
     border-radius: 4.4rem;
     padding: 0.64rem 1rem;
 
@@ -241,6 +312,8 @@ html {
     padding-bottom: 2rem;
   }
   &__btn {
+    text-align: center;
+    text-decoration: none;
     margin-top: auto;
     padding: 1rem 1.5rem;
     width: 12.7rem;
@@ -248,17 +321,17 @@ html {
     background-color: #FFFFFF;
     padding-top: 1rem;
     cursor: pointer;
-    border: 0.2rem solid #005BBB;
+    border: 0.2rem solid $primary-color;
     border-radius: 0.57rem;
     outline: none;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 1rem;
-    color: #005BBB;
+    color: $primary-color;
     transition: .3s ease-in-out;
     &:hover {
-        background-color:#005BBB;
+        background-color:$primary-color;
         color: #FFFFFF;
     }
   }
@@ -291,6 +364,7 @@ html {
     display: flex;
     flex-direction: row;
     align-items: center;
+    text-decoration: none;
     cursor: pointer;
   }
   &__logo {
@@ -302,7 +376,7 @@ html {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 800;
-    color: #005BBB;
+    color: $primary-color;
   }
   &__info {
     padding-top: 1rem;
@@ -400,7 +474,6 @@ html {
     font-size: 18px;
   }
   .team {
-    // padding-top: 3vh;
       &__row {
           flex-direction: column;
           justify-content: space-between;
@@ -464,6 +537,14 @@ html {
 @media screen and (max-width: 600px) {
   html {
     font-size: 12px;
+  }
+  .header {
+    &__banner {
+    margin-left: 8vw;
+    }
+   &__contacts-lang {
+     padding-right: 8vw;
+   }
   }
   .team {
     &__row {
