@@ -11,6 +11,8 @@ const render = (filename) => {
     });
 }
 
+render('index');
 render('en');
+render('ru');
 
 

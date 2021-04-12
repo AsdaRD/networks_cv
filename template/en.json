@@ -1,4 +1,26 @@
 {
     "contact": "Contact",
-    "projects": "Our projects"
+    "projects": "Our projects",
+    "ecosmart": "Software and hardware complex of ecological monitoring control. Built on the stack of PHP (Yii2), MYSQL, Python technologies.",
+    "btn_view": "View",
+    "ecomap": "Environmental monitoring system. Built on the stack of technologies NodeJS, Postgres, VueJS.",
+    "incognitohr": "A global secure and anonymous recruitment platform for IT professionals. Built on the PHP (Yii2), MYSQL stack.",
+    "team": "Our team",
+    "cv": "CV",
+    "sharypov": "Sharypov Dmytro",
+    "dusha": "Igumnov Andrew",
+    "lukash": "Lukash Dmytro",
+    "sobolevskii": "Sobolevskii Ivan",
+    "shakh": "Shakh Arthur",
+    "ahmedhanov": "Ahmedhanov Maxim",
+    "working_hours": "Working Mon-Fri from 08:00 to 21:00",
+    "contacts": "Contacts",
+    "address": "Sviatoslava Khorobroho, 31, Dnipro, Dnipropetrovs'ka oblast",
+    "main": "en.html",
+    "current_lang": "EN",
+    "first_lang_link": "index.html",
+    "first_lang": "UA",
+    "second_lang_link": "ru.html",
+    "second_lang": "RU",
+    "address_link": "https://goo.gl/maps/GmgJdeVoDNcdjcv89"
 }

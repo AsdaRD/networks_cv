@@ -15,23 +15,23 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="header__banner">
+        <a href="<%= translation.main %>" class="header__banner">
             <img class="header__logo" src="../../assets/images/icon.svg" alt="Networks_CV">
             <h3 class="header__caption">DEVELOPMENT</h3>
         </a>
         <div class="header__contacts-lang">   
             <a href="#" class="header__contacts-container">
-                <div class="header__contacts" href="#"> <%= translation.contact %></div>
+                <div class="header__contacts" href="#"><%= translation.contact %></div>
                 <div class="header__border"></div>
             </a>
             <div class="header__lang">
                 <div class="header__lang-selected">
-                    <p class="header__lang-content">UA</p>
+                    <p class="header__lang-content"><%= translation.current_lang %></p>
                     <img src="../../assets/images/arrow-point-to-right.svg" alt="arrow-down">
                 </div>
                 <div class="header__lang-list">
-                    <a class="header__lang-link" href="en.html">EN</a>
-                    <a class="header__lang-link" href="ru.html">RU</a>
+                    <a class="header__lang-link" href="<%= translation.first_lang_link %>"><%= translation.first_lang %></a>
+                    <a class="header__lang-link" href="<%= translation.second_lang_link %>"><%= translation.second_lang %></a>
                 </div>
             </div>
         </div>      
@@ -47,9 +47,10 @@
                             <img class="projects__logo" src="../../assets/images/ecosmart-logo.svg" alt="ecosmart-logo">
                             <div class="projects__frame">
                                 <h2 class="projects__name">Ecosmart</h2>
-                                <p class="projects__content">Програмно-апаратний комплекс диспетчерського керування автоматизованою системою екологічного моніторингу. Побудовано на стеку технологій PHP(Yii2), MYSQL, Python. 
+                                <p class="projects__content">
+                                    <%= translation.ecosmart %>
                                 </p>
-                                <a href="##" target="_blank" class="projects__btn">Переглянути</a> 
+                                <a href="##" target="_blank" class="projects__btn"><%= translation.btn_view %></a> 
                             </div>
                         </div>
                     </div>
@@ -59,9 +60,9 @@
                             <div class="projects__frame">
                                 <h2 class="projects__name">EcoMap</h2>
                                 <p class="projects__content">
-                                    Система моніторингу стану навколишнього природного середовища. Побудовано на стеку технологій NodeJS, Postgres, VueJS. 
+                                    <%= translation.ecomap %>
                                 </p>
-                                <a href="https://ecomap.hetznet.com" target="_blank" class="projects__btn">Переглянути</a> 
+                                <a href="https://ecomap.hetznet.com" target="_blank" class="projects__btn"><%= translation.btn_view %></a> 
                             </div>
                         </div>
                     </div>
@@ -71,9 +72,9 @@
                             <div class="projects__frame">
                                 <h2 class="projects__name">IncognitoHR</h2>
                                 <p class="projects__content">
-                                    Глобальна рекрутингова платформа для ІТ-спеціалістів, що забезпечує безпечний та анонімний набір персоналу. Побудовано на стеку PHP(Yii2), MYSQL.
+                                    <%= translation.incognitohr %>
                                 </p>
-                                <a href="https://incognitohr.com/en" target="_blank" class="projects__btn">Переглянути</a> 
+                                <a href="https://incognitohr.com/en" target="_blank" class="projects__btn"><%= translation.btn_view %></a> 
                             </div>
                         </div>
                     </div>    
@@ -81,7 +82,7 @@
         </article>
         <article class="team">
             <header class="team__header">
-                <h2>Наша команда</h2>
+                <h2><%= translation.team %></h2>
             </header>
             <section class="team__article">
                 <div class="team__row">
@@ -89,10 +90,10 @@
                         <div class="team__card">
                             <div class="team__avatar-cv">
                                 <img class="team__avatar" src="../../assets/images/Dmitriy_Sharipov.jpeg" alt="Frontend_developer">
-                                <button class="team__cv">Резюме</button>
+                                <button class="team__cv"><%= translation.cv %></button>
                             </div>
                             <div class="team__frame">
-                                <h2 class="team__name">Дмитро Шарипов</h2>
+                                <h2 class="team__name"><%= translation.sharypov %></h2>
                                 <div class="team__position">
                                     <p class="team__position-content">Fullstack developer</p>
                                 </div>
@@ -109,10 +110,10 @@
                         <div class="team__card">
                             <div class="team__avatar-cv">
                                 <img class="team__avatar" src="../../assets/images/Andrey_Igumnov.jpg" alt="Frontend_developer">
-                                <button class="team__cv">Резюме</button>
+                                <button class="team__cv"><%= translation.cv %></button>
                             </div>
                             <div class="team__frame">
-                                <h2 class="team__name">Андрій Ігумнов</h2>
+                                <h2 class="team__name"><%= translation.dusha %></h2>
                                 <div class="team__position">
                                     <p class="team__position-content">Backend developer</p>
                                 </div>
@@ -131,10 +132,10 @@
                         <div class="team__card">
                             <div class="team__avatar-cv">
                                 <img class="team__avatar" src="../../assets/images/Dmitriy_Lukash.jpeg" alt="Frontend_developer">
-                                <button class="team__cv">Резюме</button>
+                                <button class="team__cv"><%= translation.cv %></button>
                             </div>
                             <div class="team__frame">
-                                <h2 class="team__name">Дмитро Лукаш</h2>
+                                <h2 class="team__name"><%= translation.lukash %></h2>
                                 <div class="team__position">
                                     <p class="team__position-content">Junior developer</p>
                                 </div>
@@ -151,10 +152,10 @@
                         <div class="team__card">
                             <div class="team__avatar-cv">
                                 <img class="team__avatar" src="../../assets/images/Ivan_Sobolevskiy.jpeg" alt="Frontend_developer">
-                                <button class="team__cv">Резюме</button>
+                                <button class="team__cv"><%= translation.cv %></button>
                             </div>
                             <div class="team__frame">
-                                <h2 class="team__name">Іван Соболевський</h2>
+                                <h2 class="team__name"><%= translation.sobolevskii %></h2>
                                 <div class="team__position">
                                     <p class="team__position-content">DevOps</p>
                                 </div>
@@ -173,10 +174,10 @@
                         <div class="team__card">
                             <div class="team__avatar-cv">
                                 <img class="team__avatar" src="../../assets/images/Arthur_Shakh.jpeg" alt="Frontend_developer">
-                                <button class="team__cv">Резюме</button>
+                                <button class="team__cv"><%= translation.cv %></button>
                             </div>
                             <div class="team__frame">
-                                <h2 class="team__name">Артур Шах</h2>
+                                <h2 class="team__name"><%= translation.shakh %></h2>
                                 <div class="team__position">
                                     <p class="team__position-content">QA Engineer</p>
                                 </div>
@@ -193,10 +194,10 @@
                         <div class="team__card">
                             <div class="team__avatar-cv">
                                 <img class="team__avatar" src="../../assets/images/Maxim_Ahmedhanov.jpeg" alt="Frontend_developer">
-                                <button class="team__cv">Резюме</button>
+                                <button class="team__cv"><%= translation.cv %></button>
                             </div>
                             <div class="team__frame">
-                                <h2 class="team__name">Максим Ахмедханов</h2>
+                                <h2 class="team__name"><%= translation.ahmedhanov %></h2>
                                 <div class="team__position">
                                     <p class="team__position-content">SEO</p>
                                 </div>
@@ -217,21 +218,21 @@
         <div class="footer__container">
             <div class="footer__container-networks">
                 <section class="footer__networks">
-                    <a href="index.html" class="footer__banner">
+                    <a href="<%= translation.main %>" class="footer__banner">
                         <img class="footer__logo" src="../../assets/images/icon.svg" alt="Networks_CV">
                         <h3 class="footer__caption">NETWORKS.UA</h3>
                     </a>
                     <div class="footer__info">
-                        <p class="footer__info-content">Працюємо пн-пт з 08:00 до 21:00</p>
+                        <p class="footer__info-content"><%= translation.working_hours %></p>
                     </div>
                 </section>
                 <div class="footer__contacts-adr">
-                        <h3 class="footer__contacts-adr-header">КОНТАКТИ</h3>
+                        <h3 class="footer__contacts-adr-header"><%= translation.contacts %></h3>
                         <div class="footer__contacts">
                             <a href="tel:+380675700505" class="footer__link">+38 (067) 570 05 05,  </a>
                             <a href="mailto:support@networks.ua" class="footer__link">support@networks.ua</a>
                         </div>
-                    <a href="https://goo.gl/maps/EqE9vnq6HRJ9oRzt9" target="_blank" class="footer__link">м. Дніпро, вул. Святослава Хороброго, 31</a>
+                    <a href="<%= translation.address_link %>" target="_blank" class="footer__link"><%= translation.address %></a>
                 </div>
             </div>
             <p class="footer__copyright">©2021 Networks.ua</p>
