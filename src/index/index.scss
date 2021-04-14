@@ -130,7 +130,7 @@ html {
 .team {
   display: flex;
   flex-direction: column;
-  padding-top: 8vh;
+  padding-top: 8rem;
   padding-bottom: 10rem;
   &__header {
     padding-left: 5vw;
@@ -154,7 +154,7 @@ html {
   }
   &__card {
     &-container {
-      margin-top: 7.3vh;
+      margin-top: 7.3rem;
       margin-left: 1rem;
       width: 38.4rem;
     }
@@ -182,6 +182,8 @@ html {
     border-radius: 100%;
   }
   &__cv {
+    text-align: center;
+    text-decoration: none;
     background-color: transparent;
     padding-top: 1.5rem;
     cursor: pointer;
@@ -242,7 +244,7 @@ html {
 .projects {
   display: flex;
   flex-direction: column;
-  padding-top: 7vh;
+  padding-top: 7rem;
   &__header {
     padding-left: 5vw;
     font-family: 'Inter', sans-serif;
@@ -261,7 +263,7 @@ html {
   }
   &__card { 
     &-container {
-      margin-top: 7.3vh;
+      margin-top: 7.3rem;
       margin-left: 2rem;
       width: 26rem;
     }
@@ -283,8 +285,8 @@ html {
     }
   }
   &__logo {
-    width: 21rem;
-    height: 5.7rem;
+    width: auto;
+    height: 8rem;
   }
   &__frame {
     padding-top: 5.32rem;
@@ -452,7 +454,7 @@ html {
       width: 100%;
     }
     &__logo {
-      width: 31.5rem;
+      width: auto;
       height: 8.55rem;
     }
     &__frame {

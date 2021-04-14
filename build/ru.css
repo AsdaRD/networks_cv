@@ -133,7 +133,7 @@ html {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  padding-top: 8vh;
+  padding-top: 8rem;
   padding-bottom: 10rem; }
   .team__header {
     padding-left: 5vw;
@@ -174,7 +174,7 @@ html {
     border-radius: 0.57rem;
     transition: .3s ease-in-out; }
     .team__card-container {
-      margin-top: 7.3vh;
+      margin-top: 7.3rem;
       margin-left: 1rem;
       width: 38.4rem; }
     .team__card:hover {
@@ -189,6 +189,8 @@ html {
     height: 13.36rem;
     border-radius: 100%; }
   .team__cv {
+    text-align: center;
+    text-decoration: none;
     background-color: transparent;
     padding-top: 1.5rem;
     cursor: pointer;
@@ -244,7 +246,7 @@ html {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  padding-top: 7vh; }
+  padding-top: 7rem; }
   .projects__header {
     padding-left: 5vw;
     font-family: 'Inter', sans-serif;
@@ -281,14 +283,14 @@ html {
     border: 3px solid transparent;
     transition: .3s ease-in-out; }
     .projects__card-container {
-      margin-top: 7.3vh;
+      margin-top: 7.3rem;
       margin-left: 2rem;
       width: 26rem; }
     .projects__card:hover {
       box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
   .projects__logo {
-    width: 21rem;
-    height: 5.7rem; }
+    width: auto;
+    height: 8rem; }
   .projects__frame {
     padding-top: 5.32rem;
     height: 100%;
@@ -462,7 +464,7 @@ html {
   .projects__card-container {
     width: 100%; }
   .projects__logo {
-    width: 31.5rem;
+    width: auto;
     height: 8.55rem; }
   .projects__frame {
     width: 60vw;

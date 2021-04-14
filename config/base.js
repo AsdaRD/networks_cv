@@ -55,7 +55,7 @@ const baseConf = (_path) => {
                     test: /\.html$/,
                     use: [
                         {
-                            loader: 'html-loader'
+                            loader: 'html-loader?interpolate',
                         }
                     ]
                 },
@@ -88,7 +88,7 @@ const baseConf = (_path) => {
                      * Pass along the updated reference to your code
                      * You can add here any file extension you want to get copied to your output
                      */
-                    test: /\.(png|jpg|jpeg|gif|svg)$/,
+                    test: /\.(png|jpg|jpeg|gif|svg|pdf)$/,
                     loader: 'file-loader',
                     options: {
                         outputPath: 'images'
