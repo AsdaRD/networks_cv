@@ -4,7 +4,8 @@
   padding: 0; }
 
 html {
-  font-size: 14px; }
+  font-size: 14px;
+  scroll-behavior: smooth; }
 
 .header__container {
   display: -ms-flexbox;
@@ -58,6 +59,7 @@ html {
     -ms-flex-pack: start;
         justify-content: flex-start; }
     .header__nav-link {
+      cursor: pointer;
       margin-left: 4rem;
       text-decoration: none;
       font-family: 'Inter', sans-serif;
@@ -602,7 +604,7 @@ html {
     -ms-flex-direction: row;
         flex-direction: row;
     white-space: pre; }
-  .footer__copyright {
+  .footer .__copyright {
     margin-top: 2rem;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
