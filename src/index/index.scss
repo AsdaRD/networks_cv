@@ -9,7 +9,7 @@ $primary-color: #005BBB;
 }
 html {
   font-size: 14px;
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .header__container {
@@ -54,6 +54,7 @@ html {
     flex-direction: row;
     justify-content: flex-start;
     &-link {
+      cursor: pointer;
       margin-left: 4rem;
       text-decoration: none;
       font-family: 'Inter', sans-serif;
@@ -602,7 +603,7 @@ html {
       flex-direction: row;
       white-space: pre;
     }
-    &__copyright {
+    .__copyright {
       margin-top: 2rem;
       align-self: center;
     }

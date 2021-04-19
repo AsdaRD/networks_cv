@@ -1,4 +1,5 @@
 import '../index/index.scss';
+
 document.addEventListener("DOMContentLoaded", function(event) { 
     AOS.init();
   });
@@ -34,23 +35,27 @@ const nav_about_us_links = document.querySelectorAll('.nav-link-about_us');
 
 for(const nav_team of nav_team_links) {
   nav_team.addEventListener('click', () => {
-    window.scrollTo(0, team_header.offsetTop - header.offsetHeight)
+    window.scrollTo({top: team_header.offsetTop - header.offsetHeight, left: 0, behavior: 'smooth'})
   })
 }
  
 for(const nav_projects of nav_projects_links) {
   nav_projects.addEventListener('click', () => {
-    window.scrollTo(0, projects_header.offsetTop - header.offsetHeight)
+    window.scrollTo({top: projects_header.offsetTop - header.offsetHeight, left: 0, behavior: 'smooth'})
   })
 }
 
-for(const nav_about_us of nav_about_us_links) {
-  nav_about_us.addEventListener('click', () => {
-  })
-}
+// for(const nav_about_us of nav_about_us_links) {
+//   nav_about_us.addEventListener('click', () => {
+//   })
+// }
 
 for(const banner of banners) {
   banner.addEventListener('click', () => {
-    window.scrollTo(0, 0)
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
   })
 }
+import smoothscroll from 'smoothscroll-polyfill';
+
+// kick off the polyfill!
+smoothscroll.polyfill();

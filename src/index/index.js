@@ -45,10 +45,10 @@ for(const nav_projects of nav_projects_links) {
   })
 }
 
-for(const nav_about_us of nav_about_us_links) {
-  nav_about_us.addEventListener('click', () => {
-  })
-}
+// for(const nav_about_us of nav_about_us_links) {
+//   nav_about_us.addEventListener('click', () => {
+//   })
+// }
 
 for(const banner of banners) {
   banner.addEventListener('click', () => {
