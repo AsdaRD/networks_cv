@@ -495,7 +495,7 @@ html {
     align-items: flex-start;
   }
   &__link {
-    text-align: center;
+    text-align: left;
     padding-bottom: 1rem;
     text-decoration: none;
     color: #000000;
@@ -603,7 +603,7 @@ html {
       flex-direction: row;
       white-space: pre;
     }
-    .__copyright {
+    &__copyright {
       margin-top: 2rem;
       align-self: center;
     }
