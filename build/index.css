@@ -510,7 +510,7 @@ html {
     -ms-flex-align: start;
         align-items: flex-start; }
   .footer__link {
-    text-align: center;
+    text-align: left;
     padding-bottom: 1rem;
     text-decoration: none;
     color: #000000; }
@@ -604,7 +604,7 @@ html {
     -ms-flex-direction: row;
         flex-direction: row;
     white-space: pre; }
-  .footer .__copyright {
+  .footer__copyright {
     margin-top: 2rem;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
