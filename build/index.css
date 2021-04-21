@@ -328,7 +328,7 @@ html {
     font-size: 1.7rem;
     color: #000000; }
   .projects__article {
-    width: 88vw;
+    width: 95vw;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
@@ -340,8 +340,7 @@ html {
   .projects__card {
     height: 100%;
     width: 100%;
-    padding-bottom: 2rem;
-    padding-top: 4.8rem;
+    padding: 4.8rem 2rem 2rem 2rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -357,8 +356,9 @@ html {
     transition: .3s ease-in-out; }
     .projects__card-container {
       margin-top: 7.3rem;
-      margin-left: 2rem;
-      width: 26rem; }
+      margin-left: 1rem;
+      margin-right: 1rem;
+      width: 33.33333%; }
     .projects__card:hover {
       box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
   .projects__logo {
@@ -367,7 +367,7 @@ html {
   .projects__frame {
     padding-top: 5.32rem;
     height: 100%;
-    width: 21rem;
+    width: 90%;
     display: -ms-flexbox;
     display: flex;
     font-size: 1rem;
@@ -389,6 +389,16 @@ html {
     font-size: 1rem;
     line-height: 1.5rem;
     padding-bottom: 2rem; }
+    .projects__content-list {
+      list-style: "-   ";
+      padding-left: 1rem; }
+      .projects__content-list li {
+        list-style-position: outside;
+        line-height: 2rem; }
+    .projects__content-about-header {
+      width: 100%;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem; }
   .projects__btn {
     text-align: center;
     text-decoration: none;
@@ -540,15 +550,27 @@ html {
     width: auto;
     height: 8.55rem; }
   .projects__frame {
-    width: 60vw;
+    width: 80%;
     -ms-flex-align: center;
         align-items: center; }
   .projects__name {
     font-size: 2rem; }
   .projects__content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
     font-size: 1.5rem;
     line-height: 2.25rem;
-    text-align: center; } }
+    text-align: center; }
+    .projects__content-about-header {
+      margin-top: 3rem;
+      margin-bottom: 2rem; }
+    .projects__content ul {
+      text-align: left;
+      margin: 0 auto; } }
 
 @media screen and (max-width: 992px) {
   html {
@@ -631,7 +653,9 @@ html {
     -ms-flex-align: start;
         align-items: flex-start; }
   .projects__content {
-    text-align: left; } }
+    text-align: left; }
+    .projects__content-about-header {
+      text-align: left; } }
 
 @media screen and (max-width: 600px) {
   html {

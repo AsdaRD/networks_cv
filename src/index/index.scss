@@ -328,7 +328,7 @@ html {
     
   }
   &__article {
-    width: 88vw;
+    width: 95vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -337,13 +337,14 @@ html {
   &__card { 
     &-container {
       margin-top: 7.3rem;
-      margin-left: 2rem;
-      width: 26rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      width: 33.33333%;
     }
     height: 100%;
     width: 100%;
-    padding-bottom: 2rem;
-    padding-top: 4.8rem;
+    padding:4.8rem 2rem 2rem 2rem;
+    // padding-top: 4.8rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -364,7 +365,7 @@ html {
   &__frame {
     padding-top: 5.32rem;
     height: 100%;
-    width: 21rem;
+    width: 90%;
     display: flex;
     font-size: 1rem;
     flex-direction: column;
@@ -385,6 +386,19 @@ html {
     font-size: 1rem;
     line-height: 1.5rem;
     padding-bottom: 2rem;
+    &-list {
+      list-style: "-   ";
+      padding-left: 1rem;
+      & li {
+        list-style-position: outside;
+        line-height: 2rem;
+      }
+    }
+    &-about-header {
+      width: 100%;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
   }
   &__btn {
     text-align: center;
@@ -531,16 +545,27 @@ html {
       height: 8.55rem;
     }
     &__frame {
-      width: 60vw;
+      width: 80%;
       align-items: center;
     }
     &__name {
       font-size: 2rem;
     }
     &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       font-size: 1.5rem;
       line-height: 2.25rem;
       text-align: center;
+      &-about-header{
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+      } 
+      & ul {
+        text-align: left;
+        margin: 0 auto;
+      }
     }
   }  
 }
@@ -633,6 +658,9 @@ html {
   }
   .projects__content {
     text-align: left;
+    &-about-header {
+      text-align: left;
+    }
   }
 }
 
