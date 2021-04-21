@@ -88,7 +88,7 @@ const baseConf = (_path) => {
                      * Pass along the updated reference to your code
                      * You can add here any file extension you want to get copied to your output
                      */
-                    test: /\.(png|jpg|jpeg|gif|svg|pdf)$/,
+                    test: /\.(png|jpg|jpeg|gif|svg|pdf|ico)$/,
                     loader: 'file-loader',
                     options: {
                         outputPath: 'images'
