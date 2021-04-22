@@ -24,7 +24,7 @@
             <div class="header__nav">
                 <div class="header__nav-link nav-link-team"><%= translation.nav_team %></div>
                 <div class="header__nav-link nav-link-projects"><%= translation.nav_projects %></div>
-                <!-- <div class="header__nav-link nav-link-about_us"><%= translation.nav_about_us %></div> -->
+                <div class="header__nav-link nav-link-about_us"><%= translation.nav_about_us %></div>
             </div>
             <div class="header__contacts-lang">   
                 <a href="mailto:support@networks.ua" class="header__contacts-container">
@@ -49,7 +49,7 @@
         <div class="header__sidebar">
             <div class="header__sidebar-link nav-link-team"><%= translation.nav_team %></div>
             <div class="header__sidebar-link nav-link-projects"><%= translation.nav_projects %></div>
-            <!-- <div class="header__sidebar-link nav-link-about_us"><%= translation.nav_about_us %></div> -->
+            <div class="header__sidebar-link nav-link-about_us"><%= translation.nav_about_us %></div>
             <a class="header__sidebar-link" href="mailto:support@networks.ua"><%= translation.contact %></a>
         </div>
     </header>    
@@ -260,6 +260,52 @@
                     </div>    
                 </div>
             </section>
+        </article>
+        <article class="about_us">
+            <header class="about_us__header">
+                <h2><%= translation.about_us %></h2>
+            </header>
+            <section class="about_us__article">
+                <div class="about_us__row">
+                    <div class="about_us__card-container" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="about_us__card">
+                            <img class="about_us__card-check" src="../../assets/images/check.svg" alt="checkmark">
+                            <div class="about_us__card-frame">
+                                <h2 class="about_us__card-header"><%= translation.flexibility %></h2>
+                                <p class="about_us__card-description"><%= translation.flexibility_description %></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about_us__card-container" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="about_us__card">
+                            <img class="about_us__card-check" src="../../assets/images/check.svg" alt="checkmark">
+                            <div class="about_us__card-frame">
+                                <h2 class="about_us__card-header"><%= translation.сlient_oriented %></h2>
+                                <p class="about_us__card-description"><%= translation.сlient_oriented_description %></p>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="about_us__row">
+                    <div class="about_us__card-container" data-aos="fade-up" data-aos-duration="1000">   
+                        <div class="about_us__card">
+                            <img class="about_us__card-check" src="../../assets/images/check.svg" alt="checkmark">
+                            <div class="about_us__card-frame">
+                                <h2 class="about_us__card-header"><%= translation.confidentiality %></h2>
+                                <p class="about_us__card-description"><%= translation.confidentiality_description %></p>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="about_us__card-container" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="about_us__card">
+                            <img class="about_us__card-check" src="../../assets/images/check.svg" alt="checkmark">
+                            <div class="about_us__card-frame">
+                                <h2 class="about_us__card-header"><%= translation.responsibility %></h2>
+                                <p class="about_us__card-description"><%= translation.responsibility_description %></p>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
         </article>
     </main>
     <footer class="footer">

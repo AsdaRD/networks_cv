@@ -27,6 +27,7 @@ menu_btn.addEventListener('click', () => {
 const header = document.querySelector('.header__container');
 const team_header = document.querySelector('.team__header');
 const projects_header = document.querySelector('.projects__header');
+const about_us_header = document.querySelector('.about_us__header');
 const banners = document.querySelectorAll('.banner');
 
 const nav_team_links = document.querySelectorAll('.nav-link-team');
@@ -45,10 +46,11 @@ for(const nav_projects of nav_projects_links) {
   })
 }
 
-// for(const nav_about_us of nav_about_us_links) {
-//   nav_about_us.addEventListener('click', () => {
-//   })
-// }
+for(const nav_about_us of nav_about_us_links) {
+  nav_about_us.addEventListener('click', () => {
+    window.scrollTo({top: about_us_header.offsetTop - header.offsetHeight, left: 0, behavior: 'smooth'})
+  })
+}
 
 for(const banner of banners) {
   banner.addEventListener('click', () => {

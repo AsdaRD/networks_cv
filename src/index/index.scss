@@ -204,7 +204,6 @@ html {
   display: flex;
   flex-direction: column;
   padding-top: 8rem;
-  padding-bottom: 10rem;
   &__header {
     padding-left: 5vw;
     font-family: 'Inter', sans-serif;
@@ -521,6 +520,77 @@ html {
     font-size: 1rem;
   }
 }
+.about_us {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+  &__header {
+    padding-left: 5vw;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: $font-size-medium;
+    color: #000000;
+  }
+  &__article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__card {
+    &-container {
+      margin-top: 7.3rem;
+      // margin-left: 2rem;
+      // margin-right: 2rem;
+      width: 43%;
+      padding: 1.2rem 2rem 1.2rem 3rem;
+      background: #FFFFFF;
+      box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.05);
+      border-radius: 0.57rem;
+      border: 0.22rem dashed $primary-color;
+    }
+      min-height: 13rem;
+      display: flex;
+      flex-direction: row;
+      justify-content:  space-around;
+    &-check {
+      width: 3rem;
+    }
+    &-frame {
+      padding-left: 3rem;
+      padding-right: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-header {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 2rem;
+      color: #000000;
+      padding-bottom: 1.1rem;
+    }
+    &-description {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font-size-small;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+
+
 
 @media screen and (max-width: 1440px) {
   html {
@@ -614,6 +684,15 @@ html {
   }
   .projects__frame {
     width: 70vw;
+  }
+  .about_us {
+    &__row {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+      &__card-container {
+        width: 90%;
+      }
   }
   .footer {
     &__container-networks {

@@ -598,6 +598,7 @@ menu_btn.addEventListener('click', function () {
 var header = document.querySelector('.header__container');
 var team_header = document.querySelector('.team__header');
 var projects_header = document.querySelector('.projects__header');
+var about_us_header = document.querySelector('.about_us__header');
 var banners = document.querySelectorAll('.banner');
 
 var nav_team_links = document.querySelectorAll('.nav-link-team');
@@ -643,11 +644,6 @@ try {
       window.scrollTo({ top: projects_header.offsetTop - header.offsetHeight, left: 0, behavior: 'smooth' });
     });
   }
-
-  // for(const nav_about_us of nav_about_us_links) {
-  //   nav_about_us.addEventListener('click', () => {
-  //   })
-  // }
 } catch (err) {
   _didIteratorError4 = true;
   _iteratorError4 = err;
@@ -668,11 +664,11 @@ var _didIteratorError5 = false;
 var _iteratorError5 = undefined;
 
 try {
-  for (var _iterator5 = banners[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-    var banner = _step5.value;
+  for (var _iterator5 = nav_about_us_links[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+    var nav_about_us = _step5.value;
 
-    banner.addEventListener('click', function () {
-      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    nav_about_us.addEventListener('click', function () {
+      window.scrollTo({ top: about_us_header.offsetTop - header.offsetHeight, left: 0, behavior: 'smooth' });
     });
   }
 } catch (err) {
@@ -686,6 +682,33 @@ try {
   } finally {
     if (_didIteratorError5) {
       throw _iteratorError5;
+    }
+  }
+}
+
+var _iteratorNormalCompletion6 = true;
+var _didIteratorError6 = false;
+var _iteratorError6 = undefined;
+
+try {
+  for (var _iterator6 = banners[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+    var banner = _step6.value;
+
+    banner.addEventListener('click', function () {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    });
+  }
+} catch (err) {
+  _didIteratorError6 = true;
+  _iteratorError6 = err;
+} finally {
+  try {
+    if (!_iteratorNormalCompletion6 && _iterator6.return) {
+      _iterator6.return();
+    }
+  } finally {
+    if (_didIteratorError6) {
+      throw _iteratorError6;
     }
   }
 }

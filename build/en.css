@@ -206,8 +206,7 @@ html {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  padding-top: 8rem;
-  padding-bottom: 10rem; }
+  padding-top: 8rem; }
   .team__header {
     padding-left: 5vw;
     font-family: 'Inter', sans-serif;
@@ -532,6 +531,78 @@ html {
     font-weight: normal;
     font-size: 1rem; }
 
+.about_us {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding-top: 8rem;
+  padding-bottom: 10rem; }
+  .about_us__header {
+    padding-left: 5vw;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.7rem;
+    color: #000000; }
+  .about_us__article {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center; }
+  .about_us__row {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-align: center;
+        align-items: center; }
+  .about_us__card {
+    min-height: 13rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .about_us__card-container {
+      margin-top: 7.3rem;
+      width: 43%;
+      padding: 1.2rem 2rem 1.2rem 3rem;
+      background: #FFFFFF;
+      box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.05);
+      border-radius: 0.57rem;
+      border: 0.22rem dashed #005BBB; }
+    .about_us__card-check {
+      width: 3rem; }
+    .about_us__card-frame {
+      padding-left: 3rem;
+      padding-right: 2rem;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-pack: center;
+          justify-content: center; }
+    .about_us__card-header {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 2rem;
+      color: #000000;
+      padding-bottom: 1.1rem; }
+    .about_us__card-description {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.29rem;
+      line-height: 1.5rem; }
+
 @media screen and (max-width: 1440px) {
   html {
     font-size: 14px; } }
@@ -614,6 +685,13 @@ html {
         flex-direction: column; }
   .projects__frame {
     width: 70vw; }
+  .about_us__row {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  .about_us__card-container {
+    width: 90%; }
   .footer__container-networks {
     -ms-flex-direction: column;
         flex-direction: column;
