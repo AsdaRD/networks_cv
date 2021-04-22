@@ -548,8 +548,6 @@ html {
   &__card {
     &-container {
       margin-top: 7.3rem;
-      // margin-left: 2rem;
-      // margin-right: 2rem;
       width: 43%;
       padding: 1.2rem 2rem 1.2rem 3rem;
       background: #FFFFFF;
@@ -558,6 +556,7 @@ html {
       border: 0.22rem dashed $primary-color;
     }
       min-height: 13rem;
+      max-height: 15rem;
       display: flex;
       flex-direction: row;
       justify-content:  space-around;

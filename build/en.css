@@ -564,6 +564,7 @@ html {
         align-items: center; }
   .about_us__card {
     min-height: 13rem;
+    max-height: 15rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
