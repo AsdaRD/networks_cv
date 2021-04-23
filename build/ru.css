@@ -363,6 +363,17 @@ html {
   .projects__logo {
     width: auto;
     height: 7vw; }
+    .projects__logo-container {
+      height: 8rem;
+      width: 100%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
   .projects__frame {
     padding-top: 5.32rem;
     height: 100%;

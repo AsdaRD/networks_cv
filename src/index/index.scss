@@ -357,6 +357,14 @@ html {
     }
   }
   &__logo {
+    &-container {
+      height: 8rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+    }
     width: auto;
     height: 7vw;
   }
