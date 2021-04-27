@@ -12,13 +12,18 @@
     <link rel="shortcut icon" href="${require(`../../assets/images/favicon.ico`)}" type="image/x-icon">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/aa3b0af1e4.js" crossorigin="anonymous"></script>
-
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 </head>
 <body>
+    <div class="parallax parallax-window" data-parallax="scroll" data-image-src="${require(`../../assets/images/webdev-christopher-gower.jpg`)}">
+        <div class="overlay"></div>
+    </div>
     <header class="header__container">
         <div class="header">
             <div class="header__banner banner">
-                <img class="header__logo" src="../../assets/images/icon.svg" alt="Networks_CV">
+                <img class="header__logo" src="../../assets/images/icon_white.svg" alt="Networks_CV">
                 <h3 class="header__caption">DEVELOPMENT</h3>
             </div>
             <div class="header__nav">
@@ -34,7 +39,7 @@
                 <div class="header__lang">
                     <div class="header__lang-selected">
                         <p class="header__lang-content">UA</p>
-                        <img src="../../assets/images/arrow-point-to-right.svg" alt="arrow-down">
+                        <img src="../../assets/images/arrow-point-to-down-soft-blue.svg" alt="arrow-down" class="arrow_point_to_down">
                     </div>
                     <div class="header__lang-list">
                         <a class="header__lang-link" href="en.html">EN</a>
@@ -42,7 +47,7 @@
                     </div>
                 </div>
                 <button class="header__sidebar-btn">
-                    <img src="../../assets/images/menu.svg" alt="menu" class="header__sidebar__img">
+                    <img src="../../assets/images/menu_white.svg" alt="menu" class="header__sidebar__img">
                 </button>
             </div>  
         </div>    
@@ -54,7 +59,7 @@
         </div>
     </header>    
     <main>
-        <article id="projects" class="projects">
+        <article class="projects">
             <header class="projects__header">
                 <h2 class="projects__header-content">Наші проекти</h2>
             </header>
@@ -134,7 +139,7 @@
                     </div>    
                 </section>
         </article>
-        <article id='team' class="team">
+        <article class="team">
             <header class="team__header">
                 <h2>Наша команда</h2>
             </header>
@@ -320,7 +325,7 @@
             <div class="footer__container-networks">
                 <section class="footer__networks">
                     <div class="footer__banner banner">
-                        <img class="footer__logo" src="../../assets/images/icon.svg" alt="Networks_CV">
+                        <img class="footer__logo" src="../../assets/images/icon_primary.svg" alt="Networks_CV">
                         <h3 class="footer__caption">NETWORKS.UA</h3>
                     </div>
                     <div class="footer__info">

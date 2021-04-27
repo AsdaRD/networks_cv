@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -509,16 +509,52 @@
 
 
 /***/ }),
-/* 2 */,
-/* 3 */,
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/b5af7439b2cb2be9ecd2de600cba260d.svg";
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/76df5f556dccde8546c87cd1aa0fed51.svg";
+
+/***/ }),
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(5);
-
+module.exports = __webpack_require__.p + "images/6ee11e3456fa2bab530eed8cbe7fe74c.svg";
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/d7945d11bd4f07e15067eec2af338970.svg";
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/5449c9a44290df9cd276448987a901b8.svg";
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/a0dd277bb54904b1f60f527aea1ce715.svg";
+
+/***/ }),
+/* 8 */,
+/* 9 */,
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(11);
+
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -535,14 +571,52 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 document.addEventListener("DOMContentLoaded", function (event) {
   AOS.init();
 });
+
+var header = document.querySelector('.header__container');
+var team_header = document.querySelector('.team__header');
+var projects_header = document.querySelector('.projects__header');
+var about_us_header = document.querySelector('.about_us__header');
+var banners = document.querySelectorAll('.banner');
+
+var header_logo = document.querySelector('.header__logo');
+var header_caption = document.querySelector('.header__caption');
+var header_nav_links = document.querySelectorAll('.header__nav-link');
+var header_contacts_container = document.querySelector('.header__contacts-container');
+var header_border = document.querySelector('.header__border');
+var header_lang = document.querySelector('.header__lang');
+var header_lang_links = document.querySelectorAll('.header__lang-link');
+var arrow_down = document.querySelector('.arrow_point_to_down');
+var burger = document.querySelector('.header__sidebar__img');
+var header_sidebar_links = document.querySelectorAll('.header__sidebar-link');
+
+var logo_primary = __webpack_require__(2);
+var logo_white = __webpack_require__(3);
+var arrow_down_primary = __webpack_require__(4);
+var arrow_down_blue = __webpack_require__(5);
+var burger_black = __webpack_require__(6);
+var burger_white = __webpack_require__(7);
+
+var primary_color = '#005BBB';
+var black_color = '#0D0D0D';
+var white_color = '#ffff';
+var blue_color = '#D1E1F3';
+
 var menu_link = document.querySelectorAll('.header__sidebar-link');
 var menu_btn = document.querySelector('.header__sidebar-btn');
 var btn_img = document.querySelector('.header__sidebar__img');
 var modal_bar = document.querySelector('.header__sidebar');
+
+var nav_team_links = document.querySelectorAll('.nav-link-team');
+var nav_projects_links = document.querySelectorAll('.nav-link-projects');
+var nav_about_us_links = document.querySelectorAll('.nav-link-about_us');
+
 menu_btn.addEventListener('click', function () {
   if (!modal_bar.classList.contains('header__sidebar__active')) {
     btn_img.classList.add('header__sidebar__img-active');
     modal_bar.classList.add('header__sidebar__active');
+    if (window.scrollY == 0) {
+      header.style.backgroundColor = '#323539cc';
+    }
     var _iteratorNormalCompletion = true;
     var _didIteratorError = false;
     var _iteratorError = undefined;
@@ -570,6 +644,9 @@ menu_btn.addEventListener('click', function () {
   } else {
     btn_img.classList.remove('header__sidebar__img-active');
     modal_bar.classList.remove('header__sidebar__active');
+    if (window.scrollY == 0) {
+      header.style.backgroundColor = 'transparent';
+    }
     var _iteratorNormalCompletion2 = true;
     var _didIteratorError2 = false;
     var _iteratorError2 = undefined;
@@ -597,120 +674,289 @@ menu_btn.addEventListener('click', function () {
   }
 });
 
-var header = document.querySelector('.header__container');
-var team_header = document.querySelector('.team__header');
-var projects_header = document.querySelector('.projects__header');
-var about_us_header = document.querySelector('.about_us__header');
-var banners = document.querySelectorAll('.banner');
+window.addEventListener('scroll', function () {
+  var position_y = window.scrollY;
+  if (position_y !== 0) {
+    window.requestAnimationFrame(function () {
+      header.style.backgroundColor = white_color;
+      header_logo.src = logo_primary;
+      header_caption.style.color = primary_color;
+      var _iteratorNormalCompletion3 = true;
+      var _didIteratorError3 = false;
+      var _iteratorError3 = undefined;
 
-var nav_team_links = document.querySelectorAll('.nav-link-team');
-var nav_projects_links = document.querySelectorAll('.nav-link-projects');
-var nav_about_us_links = document.querySelectorAll('.nav-link-about_us');
+      try {
+        for (var _iterator3 = header_nav_links[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+          var header_nav_link = _step3.value;
 
-var _iteratorNormalCompletion3 = true;
-var _didIteratorError3 = false;
-var _iteratorError3 = undefined;
+          header_nav_link.style.color = black_color;
+        }
+      } catch (err) {
+        _didIteratorError3 = true;
+        _iteratorError3 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+            _iterator3.return();
+          }
+        } finally {
+          if (_didIteratorError3) {
+            throw _iteratorError3;
+          }
+        }
+      }
+
+      header_contacts_container.style.color = black_color;
+      header_border.style.backgroundColor = primary_color;
+      header_lang.style.color = black_color;
+      var _iteratorNormalCompletion4 = true;
+      var _didIteratorError4 = false;
+      var _iteratorError4 = undefined;
+
+      try {
+        for (var _iterator4 = header_lang_links[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+          var header_lang_link = _step4.value;
+
+          header_lang_link.classList.add('header__lang-link__primary');
+        }
+      } catch (err) {
+        _didIteratorError4 = true;
+        _iteratorError4 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+            _iterator4.return();
+          }
+        } finally {
+          if (_didIteratorError4) {
+            throw _iteratorError4;
+          }
+        }
+      }
+
+      arrow_down.src = arrow_down_primary;
+      burger.src = burger_black;
+      var _iteratorNormalCompletion5 = true;
+      var _didIteratorError5 = false;
+      var _iteratorError5 = undefined;
+
+      try {
+        for (var _iterator5 = header_sidebar_links[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+          var header_sidebar_link = _step5.value;
+
+          header_sidebar_link.style.color = black_color;
+        }
+      } catch (err) {
+        _didIteratorError5 = true;
+        _iteratorError5 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion5 && _iterator5.return) {
+            _iterator5.return();
+          }
+        } finally {
+          if (_didIteratorError5) {
+            throw _iteratorError5;
+          }
+        }
+      }
+    });
+  } else {
+    window.requestAnimationFrame(function () {
+      if (!modal_bar.classList.contains('header__sidebar__active')) {
+        header.style.backgroundColor = 'transparent';
+      } else {
+        header.style.backgroundColor = '#323539cc';
+      }
+      header_logo.src = logo_white;
+      header_caption.style.color = white_color;
+      var _iteratorNormalCompletion6 = true;
+      var _didIteratorError6 = false;
+      var _iteratorError6 = undefined;
+
+      try {
+        for (var _iterator6 = header_nav_links[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+          var header_nav_link = _step6.value;
+
+          header_nav_link.style.color = white_color;
+        }
+      } catch (err) {
+        _didIteratorError6 = true;
+        _iteratorError6 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion6 && _iterator6.return) {
+            _iterator6.return();
+          }
+        } finally {
+          if (_didIteratorError6) {
+            throw _iteratorError6;
+          }
+        }
+      }
+
+      header_contacts_container.style.color = white_color;
+      header_border.style.backgroundColor = blue_color;
+      header_lang.style.color = white_color;
+      var _iteratorNormalCompletion7 = true;
+      var _didIteratorError7 = false;
+      var _iteratorError7 = undefined;
+
+      try {
+        for (var _iterator7 = header_lang_links[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+          var header_lang_link = _step7.value;
+
+          header_lang_link.classList.remove('header__lang-link__primary');
+        }
+      } catch (err) {
+        _didIteratorError7 = true;
+        _iteratorError7 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion7 && _iterator7.return) {
+            _iterator7.return();
+          }
+        } finally {
+          if (_didIteratorError7) {
+            throw _iteratorError7;
+          }
+        }
+      }
+
+      arrow_down.src = arrow_down_blue;
+      burger.src = burger_white;
+      var _iteratorNormalCompletion8 = true;
+      var _didIteratorError8 = false;
+      var _iteratorError8 = undefined;
+
+      try {
+        for (var _iterator8 = header_sidebar_links[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+          var header_sidebar_link = _step8.value;
+
+          header_sidebar_link.style.color = white_color;
+        }
+      } catch (err) {
+        _didIteratorError8 = true;
+        _iteratorError8 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion8 && _iterator8.return) {
+            _iterator8.return();
+          }
+        } finally {
+          if (_didIteratorError8) {
+            throw _iteratorError8;
+          }
+        }
+      }
+    });
+  }
+});
+
+var _iteratorNormalCompletion9 = true;
+var _didIteratorError9 = false;
+var _iteratorError9 = undefined;
 
 try {
-  for (var _iterator3 = nav_team_links[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-    var nav_team = _step3.value;
+  for (var _iterator9 = nav_team_links[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
+    var nav_team = _step9.value;
 
     nav_team.addEventListener('click', function () {
       window.scrollTo({ top: team_header.offsetTop - header.offsetHeight, left: 0, behavior: 'smooth' });
     });
   }
 } catch (err) {
-  _didIteratorError3 = true;
-  _iteratorError3 = err;
+  _didIteratorError9 = true;
+  _iteratorError9 = err;
 } finally {
   try {
-    if (!_iteratorNormalCompletion3 && _iterator3.return) {
-      _iterator3.return();
+    if (!_iteratorNormalCompletion9 && _iterator9.return) {
+      _iterator9.return();
     }
   } finally {
-    if (_didIteratorError3) {
-      throw _iteratorError3;
+    if (_didIteratorError9) {
+      throw _iteratorError9;
     }
   }
 }
 
-var _iteratorNormalCompletion4 = true;
-var _didIteratorError4 = false;
-var _iteratorError4 = undefined;
+var _iteratorNormalCompletion10 = true;
+var _didIteratorError10 = false;
+var _iteratorError10 = undefined;
 
 try {
-  for (var _iterator4 = nav_projects_links[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-    var nav_projects = _step4.value;
+  for (var _iterator10 = nav_projects_links[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
+    var nav_projects = _step10.value;
 
     nav_projects.addEventListener('click', function () {
       window.scrollTo({ top: projects_header.offsetTop - header.offsetHeight, left: 0, behavior: 'smooth' });
     });
   }
 } catch (err) {
-  _didIteratorError4 = true;
-  _iteratorError4 = err;
+  _didIteratorError10 = true;
+  _iteratorError10 = err;
 } finally {
   try {
-    if (!_iteratorNormalCompletion4 && _iterator4.return) {
-      _iterator4.return();
+    if (!_iteratorNormalCompletion10 && _iterator10.return) {
+      _iterator10.return();
     }
   } finally {
-    if (_didIteratorError4) {
-      throw _iteratorError4;
+    if (_didIteratorError10) {
+      throw _iteratorError10;
     }
   }
 }
 
-var _iteratorNormalCompletion5 = true;
-var _didIteratorError5 = false;
-var _iteratorError5 = undefined;
+var _iteratorNormalCompletion11 = true;
+var _didIteratorError11 = false;
+var _iteratorError11 = undefined;
 
 try {
-  for (var _iterator5 = nav_about_us_links[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-    var nav_about_us = _step5.value;
+  for (var _iterator11 = nav_about_us_links[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
+    var nav_about_us = _step11.value;
 
     nav_about_us.addEventListener('click', function () {
       window.scrollTo({ top: about_us_header.offsetTop - header.offsetHeight, left: 0, behavior: 'smooth' });
     });
   }
 } catch (err) {
-  _didIteratorError5 = true;
-  _iteratorError5 = err;
+  _didIteratorError11 = true;
+  _iteratorError11 = err;
 } finally {
   try {
-    if (!_iteratorNormalCompletion5 && _iterator5.return) {
-      _iterator5.return();
+    if (!_iteratorNormalCompletion11 && _iterator11.return) {
+      _iterator11.return();
     }
   } finally {
-    if (_didIteratorError5) {
-      throw _iteratorError5;
+    if (_didIteratorError11) {
+      throw _iteratorError11;
     }
   }
 }
 
-var _iteratorNormalCompletion6 = true;
-var _didIteratorError6 = false;
-var _iteratorError6 = undefined;
+var _iteratorNormalCompletion12 = true;
+var _didIteratorError12 = false;
+var _iteratorError12 = undefined;
 
 try {
-  for (var _iterator6 = banners[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-    var banner = _step6.value;
+  for (var _iterator12 = banners[Symbol.iterator](), _step12; !(_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done); _iteratorNormalCompletion12 = true) {
+    var banner = _step12.value;
 
     banner.addEventListener('click', function () {
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     });
   }
 } catch (err) {
-  _didIteratorError6 = true;
-  _iteratorError6 = err;
+  _didIteratorError12 = true;
+  _iteratorError12 = err;
 } finally {
   try {
-    if (!_iteratorNormalCompletion6 && _iterator6.return) {
-      _iterator6.return();
+    if (!_iteratorNormalCompletion12 && _iterator12.return) {
+      _iterator12.return();
     }
   } finally {
-    if (_didIteratorError6) {
-      throw _iteratorError6;
+    if (_didIteratorError12) {
+      throw _iteratorError12;
     }
   }
 }
