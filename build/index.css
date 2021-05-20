@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
   margin: 0;
   padding: 0; }
 
@@ -22,17 +23,69 @@ html {
 
 .parallax-window {
   position: relative;
-  min-height: 100vh;
-  background: transparent;
-  speed: 0.2; }
+  height: 100vh;
+  background: transparent; }
 
 .overlay {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  color: white;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(59, 67, 76, 0.562); }
+  background-color: rgba(59, 67, 76, 0.664); }
+
+.slogan {
+  position: absolute;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-left: 8vw;
+  margin-top: 30vh;
+  transition: opacity 0.3s ease-in-out; }
+  .slogan__inactive {
+    opacity: 0;
+    visibility: hidden; }
+  .slogan__header {
+    font-family: 'Inter', sans-serif;
+    font-size: 6rem; }
+  .slogan__content {
+    margin-top: 1vh;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem; }
+  .slogan__btn {
+    margin-top: 5vh;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    width: 14.7rem;
+    background-color: #d1e1f33f;
+    padding-top: 1rem;
+    cursor: pointer;
+    border: 0.2rem solid #ffff;
+    border-radius: 0.57rem;
+    color: white;
+    transition: .3s ease-in-out; }
+    .slogan__btn:hover {
+      background-color: #d1e1f388; }
+
+.banner__img {
+  position: absolute;
+  top: 90%;
+  left: calc(50% - 1rem);
+  width: 2rem;
+  cursor: pointer; }
 
 .header {
   padding-top: 1rem;
@@ -205,9 +258,14 @@ html {
     .header__sidebar__active {
       height: 16rem; }
     .header__sidebar-link {
-      padding: 1.1rem 0 1rem 6rem;
+      padding-left: 6rem;
       border-bottom: 0.25rem solid #D1E1F3;
-      display: block;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-pack: center;
+          justify-content: center;
       width: 100%;
       height: 4rem;
       text-decoration: none;
@@ -638,7 +696,15 @@ html {
       font-size: 1.29rem;
       line-height: 1.5rem; }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 4096px) {
+  html {
+    font-size: 22px; } }
+
+@media screen and (max-width: 2560px) {
+  html {
+    font-size: 16px; } }
+
+@media screen and (max-width: 1920px) {
   html {
     font-size: 14px; } }
 
@@ -681,6 +747,15 @@ html {
 @media screen and (max-width: 992px) {
   html {
     font-size: 18px; }
+  .slogan__header {
+    font-size: 3rem; }
+  .slogan__content {
+    margin-top: 3vh;
+    font-size: 1.6rem; }
+  .slogan__btn {
+    width: 12rem;
+    font-size: 1.4rem;
+    margin-top: 3vh; }
   .header__banner {
     margin-left: 3rem; }
   .header__contacts-container {
@@ -708,7 +783,7 @@ html {
     -ms-flex-pack: justify;
         justify-content: space-between; }
   .team__card {
-    padding-top: 9rem;
+    padding-top: 3rem;
     -ms-flex-pack: distribute;
         justify-content: space-around; }
   .team__frame {
@@ -753,6 +828,24 @@ html {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center; } }
+
+@media screen and (max-height: 414px) and (min-width: 769px) {
+  .header__sidebar__active {
+    height: 9.6rem; }
+  .header__sidebar-link {
+    height: 2.4rem;
+    font-size: 0.8rem; } }
+
+@media screen and (max-height: 600px) and (max-width: 1000px) {
+  .slogan {
+    margin-top: 35vh; }
+    .slogan__header {
+      font-size: 3rem; }
+    .slogan__content {
+      font-size: 1.6rem; }
+    .slogan__btn {
+      width: 12rem;
+      font-size: 1.4rem; } }
 
 @media screen and (max-width: 768px) {
   html {
@@ -806,6 +899,14 @@ html {
 @media screen and (max-width: 460px) {
   html {
     font-size: 9px; }
+  .slogan__header {
+    font-size: 3.6rem; }
+  .slogan__content {
+    margin-top: 3vh; }
+  .slogan__btn {
+    font-size: 2rem;
+    width: 15rem;
+    margin-top: 4vh; }
   .team__row {
     -ms-flex-direction: column;
         flex-direction: column; }
@@ -823,4 +924,8 @@ html {
 
 @media screen and (max-width: 380px) {
   html {
-    font-size: 7px; } }
+    font-size: 8px; } }
+
+@supports (-webkit-touch-callout: none) {
+  .banner__img {
+    display: none; } }

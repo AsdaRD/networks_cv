@@ -9,6 +9,9 @@ const projects_header = document.querySelector('.projects__header');
 const about_us_header = document.querySelector('.about_us__header');
 const banners = document.querySelectorAll('.banner');
 
+const parallax_banner = document.querySelector('.parallax-window');
+const slogan = document.querySelector('.slogan');
+const banner_down_img = document.querySelector('.banner__img')
 const header_logo = document.querySelector('.header__logo');
 const header_caption = document.querySelector('.header__caption');
 const header_nav_links = document.querySelectorAll('.header__nav-link');
@@ -42,10 +45,16 @@ const nav_team_links = document.querySelectorAll('.nav-link-team');
 const nav_projects_links = document.querySelectorAll('.nav-link-projects');
 const nav_about_us_links = document.querySelectorAll('.nav-link-about_us');
 
+banner_down_img.addEventListener('click', () => {
+  window.scrollTo({top: parallax_banner.offsetHeight, left: 0, behavior: 'smooth'})
+})
+
 menu_btn.addEventListener('click', () => {
   if(!modal_bar.classList.contains('header__sidebar__active')) {
     btn_img.classList.add('header__sidebar__img-active');
     modal_bar.classList.add('header__sidebar__active');
+    slogan.classList.add('slogan__inactive');
+    
     if(window.scrollY == 0) {
       header.style.backgroundColor = '#323539cc';
     }
@@ -55,6 +64,7 @@ menu_btn.addEventListener('click', () => {
   } else {
       btn_img.classList.remove('header__sidebar__img-active');
       modal_bar.classList.remove('header__sidebar__active');
+      slogan.classList.remove('slogan__inactive');
       if(window.scrollY == 0) {
         header.style.backgroundColor = 'transparent';
       }

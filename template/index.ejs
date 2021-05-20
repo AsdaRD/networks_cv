@@ -18,7 +18,14 @@
 </head>
 <body>
     <div class="parallax parallax-window" data-parallax="scroll" data-image-src="${require(`../../assets/images/webdev-christopher-gower.jpg`)}">
-        <div class="overlay"></div>
+        <div class="overlay">
+            <div class="slogan">
+                <h1 class="slogan__header">We making product</h1>
+                <h2 class="slogan__content">You doing business</h2>
+                <a href="mailto:support@networks.ua" class="slogan__btn"><%= translation.contact_us %></a>
+            </div>
+            <img src="../../assets/images/down-arrow.svg" alt="scroll_down_btn" class="banner__img">
+        </div>
     </div>
     <header class="header__container">
         <div class="header">
@@ -138,6 +145,72 @@
                         </div>
                     </div>    
                 </section>
+                <section class="projects__article">
+                    <div class="projects__card-container" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="projects__card">
+                            <div class="projects__logo-container">
+                                <img class="projects__logo" src="../../assets/images/MikroTik_logo.svg" alt="MikroTik-logo">
+                            </div>    
+                            <div class="projects__frame">
+                                <h2 class="projects__name">MikroTik backup and monitoring</h2>
+                                <div class="projects__content">
+                                    <p>
+                                        <%= translation.MikroTik %>
+                                    </p>
+                                       <h4 class="projects__content-about-header"><%= translation.MikroTik_header %></h4>
+                                    <ul class="projects__content-list">
+                                        <li><%= translation.MikroTik_first_li %></li>
+                                        <li><%= translation.MikroTik_second_li %></li>
+                                        <li><%= translation.MikroTik_third_li %></li>
+                                        <li><%= translation.MikroTik_fourth_li %></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects__card-container" data-aos="fade-up" data-aos-duration="1000">    
+                        <div class="projects__card">
+                            <div class="projects__logo-container">
+                                <img class="projects__logo" src="../../assets/images/vpn-network.svg" alt="ECM-logo">
+                            </div>    
+                            <div class="projects__frame">
+                                <h2 class="projects__name">Environment connections manager</h2>
+                                <div class="projects__content">
+                                    <p>
+                                        <%= translation.ecm %>
+                                    </p>
+                                       <h4 class="projects__content-about-header"><%= translation.ecm_header %></h4>
+                                    <ul class="projects__content-list">
+                                        <li><%= translation.ecm_first_li %></li>
+                                        <li><%= translation.ecm_second_li %></li>
+                                        <li><%= translation.ecm_third_li %></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects__card-container" data-aos="fade-up" data-aos-duration="1000">    
+                        <div class="projects__card">
+                            <div class="projects__logo-container">
+                                <img class="projects__logo" src="../../assets/images/alarm-button.svg" alt="alarm_button-logo">
+                            </div>
+                            <div class="projects__frame">
+                                <h2 class="projects__name">Alarm Button</h2>
+                                <div class="projects__content">
+                                    <p>
+                                        <%= translation.alarm_button %>
+                                    </p>
+                                       <h4 class="projects__content-about-header"><%= translation.alarm_button_header %></h4>
+                                    <ul class="projects__content-list">
+                                        <li><%= translation.alarm_button_first_li %></li>
+                                        <li><%= translation.alarm_button_second_li %></li>
+                                        <li><%= translation.alarm_button_third_li %></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </section>
         </article>
         <article class="team">
             <header class="team__header">
@@ -145,110 +218,68 @@
             </header>
             <section class="team__article">
                 <div class="team__row">
-                    <div class="team__card-container" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="team__card">
-                            <div class="team__avatar-cv">
-                                <img class="team__avatar" src="../../assets/images/Dmitriy_Sharipov.jpeg" alt="Frontend_developer">
-                                <a href="${require(`../../assets/images/VC_Sharypov_Dmytro_Fullstack.pdf`)}" target="_blank" class="team__cv"><%= translation.cv %></a>
-                            </div>
-                            <div class="team__frame">
-                                <h2 class="team__name"><%= translation.sharypov %></h2>
-                                <div class="team__position">
-                                    <p class="team__position-content">Fullstack developer</p>
-                                </div>
-                                <ul class="team__skills">
-                                    <li>Node.js</li>
-                                    <li>VueJS</li>
-                                    <li>PHP</li>
-                                    <li>SQL</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                     <div class="team__card-container" data-aos="fade-up" data-aos-duration="1000">   
                         <div class="team__card">
                             <div class="team__avatar-cv">
-                                <img class="team__avatar" src="../../assets/images/Andrey_Igumnov.jpg" alt="Frontend_developer">
-                                <a href="${require(`../../assets/images/VC_Igumnov_Andrew_Backend.pdf`)}" target="_blank" class="team__cv"><%= translation.cv %></a>
+                                <img class="team__avatar" src="../../assets/images/Maxim_Reva.jpg" alt="CEO">
+                                <a href="${require(`../../assets/images/VC_Reva_Maxim_CEO.pdf`)}" target="_blank" class="team__cv"><%= translation.cv %></a>
                             </div>
                             <div class="team__frame">
-                                <h2 class="team__name"><%= translation.dusha %></h2>
+                                <h2 class="team__name"><%= translation.reva %></h2>
                                 <div class="team__position">
-                                    <p class="team__position-content">Backend developer</p>
+                                    <p class="team__position-content">CEO</p>
                                 </div>
                                 <ul class="team__skills">
-                                    <li>PHP</li>
-                                    <li>TypeScript</li>
-                                    <li>Node.js</li>
-                                    <li>Databases</li>
+                                    <li><%= translation.ceo_skills_first %></li>
+                                    <li><%= translation.ceo_skills_second %></li>
+                                    <li><%= translation.ceo_skills_third %></li>
+                                    <li><%= translation.ceo_skills_fourth %></li>
                                 </ul>
                             </div>
                         </div>
-                    </div>    
-                </div>
-                <div class="team__row">
+                    </div> 
                     <div class="team__card-container" data-aos="fade-up" data-aos-duration="1000">
                         <div class="team__card">
                             <div class="team__avatar-cv">
-                                <img class="team__avatar" src="../../assets/images/Dmitriy_Lukash.jpeg" alt="Frontend_developer">
-                                <a href="${require(`../../assets/images/VC_Lukash_Dmytro_Developer.pdf`)}" target="_blank" class="team__cv"><%= translation.cv %></a>
+                                <img class="team__avatar" src="../../assets/images/Shipitko_Yaroslav.jpg" alt="CTO/System_Integrator">
+                                <a href="${require(`../../assets/images/VC_Shipitko_Yaroslav_CTO.pdf`)}" target="_blank" class="team__cv"><%= translation.cv %></a>
                             </div>
                             <div class="team__frame">
-                                <h2 class="team__name"><%= translation.lukash %></h2>
+                                <h2 class="team__name"><%= translation.shipitko %></h2>
                                 <div class="team__position">
-                                    <p class="team__position-content">Junior developer</p>
+                                    <p class="team__position-content">CTO/System integrator</p>
                                 </div>
                                 <ul class="team__skills">
-                                    <li>TypeScript</li>
-                                    <li>C#</li>
-                                    <li>PHP</li>
-                                    <li>SQL</li>
+                                    <li>Hardware</li>
+                                    <li>Virtualization</li>
+                                    <li>Backup</li>
+                                    <li>Windows Server</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="team__card-container" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="team__card">
-                            <div class="team__avatar-cv">
-                                <img class="team__avatar" src="../../assets/images/Ivan_Sobolevskiy.jpeg" alt="Frontend_developer">
-                                <a href="${require(`../../assets/images/VC_Sobolevskii_Ivan_DevOps.pdf`)}" target="_blank" class="team__cv"><%= translation.cv %></a>
-                            </div>
-                            <div class="team__frame">
-                                <h2 class="team__name"><%= translation.sobolevskii %></h2>
-                                <div class="team__position">
-                                    <p class="team__position-content">DevOps</p>
-                                </div>
-                                <ul class="team__skills">
-                                    <li>Jenkins</li>
-                                    <li>Docker</li>
-                                    <li>Monitoring</li>
-                                    <li>SQL administration</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>    
                 </div>
                 <div class="team__row">
-                    <div class="team__card-container" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="team__card-container" data-aos="fade-up" data-aos-duration="1000">   
                         <div class="team__card">
                             <div class="team__avatar-cv">
-                                <img class="team__avatar" src="../../assets/images/Arthur_Shakh.jpeg" alt="Frontend_developer">
-                                <a href="${require(`../../assets/images/VC_Shakh_Arthur_QA.pdf`)}" target="_blank" class="team__cv"><%= translation.cv %></a>
+                                <img class="team__avatar" src="../../assets/images/Vika_Kiva.jpeg" alt="Accountant/Technical_Writer">
+                                <a href="${require(`../../assets/images/VC_Kiva_Vika_Accountant.pdf`)}" target="_blank" class="team__cv"><%= translation.cv %></a>
                             </div>
                             <div class="team__frame">
-                                <h2 class="team__name"><%= translation.shakh %></h2>
+                                <h2 class="team__name"><%= translation.kiva %></h2>
                                 <div class="team__position">
-                                    <p class="team__position-content">QA Engineer</p>
+                                    <p class="team__position-content">Accountant/Technical writer</p>
                                 </div>
                                 <ul class="team__skills">
-                                    <li>Test documentation</li>
-                                    <li>Load testing</li>
-                                    <li>Test Automation</li>
-                                    <li>JavaScript</li>
+                                    <li>1C</li>
+                                    <li><%= translation.accountant_skills_second %></li>
+                                    <li><%= translation.accountant_skills_third %></li>
+                                    <li><%= translation.accountant_skills_fourth %></li>
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                     <div class="team__card-container" data-aos="fade-up" data-aos-duration="1000"> 
                         <div class="team__card">
                             <div class="team__avatar-cv">
@@ -269,6 +300,91 @@
                             </div>
                         </div>
                     </div>    
+                </div>
+                <div class="team__row">
+                    <div class="team__card-container" data-aos="fade-up" data-aos-duration="1000">   
+                        <div class="team__card">
+                            <div class="team__avatar-cv">
+                                <img class="team__avatar" src="../../assets/images/Andrey_Igumnov.jpg" alt="Frontend_developer">
+                                <a href="${require(`../../assets/images/VC_Igumnov_Andrew_Backend.pdf`)}" target="_blank" class="team__cv"><%= translation.cv %></a>
+                            </div>
+                            <div class="team__frame">
+                                <h2 class="team__name"><%= translation.dusha %></h2>
+                                <div class="team__position">
+                                    <p class="team__position-content">Backend developer</p>
+                                </div>
+                                <ul class="team__skills">
+                                    <li>PHP</li>
+                                    <li>TypeScript</li>
+                                    <li>Node.js</li>
+                                    <li>Databases</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="team__card-container" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="team__card">
+                            <div class="team__avatar-cv">
+                                <img class="team__avatar" src="../../assets/images/Dmitriy_Lukash.jpeg" alt="Frontend_developer">
+                                <a href="${require(`../../assets/images/VC_Lukash_Dmytro_Developer.pdf`)}" target="_blank" class="team__cv"><%= translation.cv %></a>
+                            </div>
+                            <div class="team__frame">
+                                <h2 class="team__name"><%= translation.lukash %></h2>
+                                <div class="team__position">
+                                    <p class="team__position-content">Junior developer</p>
+                                </div>
+                                <ul class="team__skills">
+                                    <li>TypeScript</li>
+                                    <li>C#</li>
+                                    <li>PHP</li>
+                                    <li>SQL</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__row">
+                    
+                    <div class="team__card-container" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="team__card">
+                            <div class="team__avatar-cv">
+                                <img class="team__avatar" src="../../assets/images/Ivan_Sobolevskiy.jpeg" alt="Frontend_developer">
+                                <a href="${require(`../../assets/images/VC_Sobolevskii_Ivan_DevOps.pdf`)}" target="_blank" class="team__cv"><%= translation.cv %></a>
+                            </div>
+                            <div class="team__frame">
+                                <h2 class="team__name"><%= translation.sobolevskii %></h2>
+                                <div class="team__position">
+                                    <p class="team__position-content">DevOps</p>
+                                </div>
+                                <ul class="team__skills">
+                                    <li>Jenkins</li>
+                                    <li>Docker</li>
+                                    <li>Monitoring</li>
+                                    <li>SQL administration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team__card-container" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="team__card">
+                            <div class="team__avatar-cv">
+                                <img class="team__avatar" src="../../assets/images/Arthur_Shakh.jpeg" alt="Frontend_developer">
+                                <a href="${require(`../../assets/images/VC_Shakh_Arthur_QA.pdf`)}" target="_blank" class="team__cv"><%= translation.cv %></a>
+                            </div>
+                            <div class="team__frame">
+                                <h2 class="team__name"><%= translation.shakh %></h2>
+                                <div class="team__position">
+                                    <p class="team__position-content">QA Engineer</p>
+                                </div>
+                                <ul class="team__skills">
+                                    <li>Test documentation</li>
+                                    <li>Load testing</li>
+                                    <li>Test Automation</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </article>

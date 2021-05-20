@@ -580,6 +580,9 @@ var projects_header = document.querySelector('.projects__header');
 var about_us_header = document.querySelector('.about_us__header');
 var banners = document.querySelectorAll('.banner');
 
+var parallax_banner = document.querySelector('.parallax-window');
+var slogan = document.querySelector('.slogan');
+var banner_down_img = document.querySelector('.banner__img');
 var header_logo = document.querySelector('.header__logo');
 var header_caption = document.querySelector('.header__caption');
 var header_nav_links = document.querySelectorAll('.header__nav-link');
@@ -612,10 +615,15 @@ var nav_team_links = document.querySelectorAll('.nav-link-team');
 var nav_projects_links = document.querySelectorAll('.nav-link-projects');
 var nav_about_us_links = document.querySelectorAll('.nav-link-about_us');
 
+banner_down_img.addEventListener('click', function () {
+  window.scrollTo({ top: parallax_banner.offsetHeight, left: 0, behavior: 'smooth' });
+});
+
 menu_btn.addEventListener('click', function () {
   if (!modal_bar.classList.contains('header__sidebar__active')) {
     btn_img.classList.add('header__sidebar__img-active');
     modal_bar.classList.add('header__sidebar__active');
+    slogan.classList.add('slogan__inactive');
     if (window.scrollY == 0) {
       header.style.backgroundColor = '#323539cc';
     }
@@ -646,6 +654,7 @@ menu_btn.addEventListener('click', function () {
   } else {
     btn_img.classList.remove('header__sidebar__img-active');
     modal_bar.classList.remove('header__sidebar__active');
+    slogan.classList.remove('slogan__inactive');
     if (window.scrollY == 0) {
       header.style.backgroundColor = 'transparent';
     }
